@@ -1,0 +1,228 @@
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260426_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-04-26 12:00:02.767006
+Config  : ./apc.local/private/backups/20260426_120002-apc_local-site_config_backup.json 94.0B
+Database: ./apc.local/private/backups/20260426_120002-apc_local-database.sql.gz         237.2KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260426_180001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-04-26 18:00:02.160956
+Config  : ./apc.local/private/backups/20260426_180001-apc_local-site_config_backup.json 94.0B
+Database: ./apc.local/private/backups/20260426_180001-apc_local-database.sql.gz         237.2KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260427_000002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-04-27 00:00:02.610253
+Config  : ./apc.local/private/backups/20260427_000002-apc_local-site_config_backup.json 111.0B
+Database: ./apc.local/private/backups/20260427_000002-apc_local-database.sql.gz         262.9KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260427_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-04-27 12:00:02.966859
+Config  : ./apc.local/private/backups/20260427_120002-apc_local-site_config_backup.json 111.0B
+Database: ./apc.local/private/backups/20260427_120002-apc_local-database.sql.gz         279.0KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260428_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-04-28 12:00:03.268983
+Config  : ./apc.local/private/backups/20260428_120002-apc_local-site_config_backup.json 200.0B
+Database: ./apc.local/private/backups/20260428_120002-apc_local-database.sql.gz         368.7KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260429_120003-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-04-29 12:00:04.874087
+Config  : ./apc.local/private/backups/20260429_120003-apc_local-site_config_backup.json 200.0B
+Database: ./apc.local/private/backups/20260429_120003-apc_local-database.sql.gz         425.8KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260430_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-04-30 12:00:03.545119
+Config  : ./apc.local/private/backups/20260430_120002-apc_local-site_config_backup.json 200.0B
+Database: ./apc.local/private/backups/20260430_120002-apc_local-database.sql.gz         449.2KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260501_120001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-01 12:00:02.671741
+Config  : ./apc.local/private/backups/20260501_120001-apc_local-site_config_backup.json 223.0B
+Database: ./apc.local/private/backups/20260501_120001-apc_local-database.sql.gz         474.2KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260502_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-02 12:00:03.025862
+Config  : ./apc.local/private/backups/20260502_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260502_120002-apc_local-database.sql.gz         522.8KiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260504_120001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-04 12:00:05.818289
+Config  : ./apc.local/private/backups/20260504_120001-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260504_120001-apc_local-database.sql.gz         1.2MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260505_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-05 12:00:05.865313
+Config  : ./apc.local/private/backups/20260505_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260505_120002-apc_local-database.sql.gz         1.2MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260506_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-06 12:00:04.180227
+Config  : ./apc.local/private/backups/20260506_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260506_120002-apc_local-database.sql.gz         1.2MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260507_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-07 12:00:04.401337
+Config  : ./apc.local/private/backups/20260507_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260507_120002-apc_local-database.sql.gz         1.3MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260508_000002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-08 00:00:04.254227
+Config  : ./apc.local/private/backups/20260508_000002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260508_000002-apc_local-database.sql.gz         1.3MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260508_120001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-08 12:00:03.791301
+Config  : ./apc.local/private/backups/20260508_120001-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260508_120001-apc_local-database.sql.gz         1.3MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260509_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-09 12:00:06.805424
+Config  : ./apc.local/private/backups/20260509_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260509_120002-apc_local-database.sql.gz         1.3MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260511_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-11 12:00:05.128060
+Config  : ./apc.local/private/backups/20260511_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260511_120002-apc_local-database.sql.gz         1.4MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260512_120001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-12 12:00:04.016468
+Config  : ./apc.local/private/backups/20260512_120001-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260512_120001-apc_local-database.sql.gz         1.4MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260513_180003-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-13 18:00:05.434261
+Config  : ./apc.local/private/backups/20260513_180003-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260513_180003-apc_local-database.sql.gz         1.4MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260514_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-14 12:00:04.419103
+Config  : ./apc.local/private/backups/20260514_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260514_120002-apc_local-database.sql.gz         1.4MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260515_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-15 12:00:06.640574
+Config  : ./apc.local/private/backups/20260515_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260515_120002-apc_local-database.sql.gz         1.4MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260516_000002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-16 00:00:04.561978
+Config  : ./apc.local/private/backups/20260516_000002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260516_000002-apc_local-database.sql.gz         1.4MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260516_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-16 12:00:05.161724
+Config  : ./apc.local/private/backups/20260516_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260516_120002-apc_local-database.sql.gz         1.5MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260518_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-18 12:00:05.544699
+Config  : ./apc.local/private/backups/20260518_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260518_120002-apc_local-database.sql.gz         1.5MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260520_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-20 12:00:06.987628
+Config  : ./apc.local/private/backups/20260520_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260520_120002-apc_local-database.sql.gz         1.5MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260521_120001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-21 12:00:04.338581
+Config  : ./apc.local/private/backups/20260521_120001-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260521_120001-apc_local-database.sql.gz         1.5MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260522_120001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-22 12:00:04.471396
+Config  : ./apc.local/private/backups/20260522_120001-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260522_120001-apc_local-database.sql.gz         1.5MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260523_120001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-23 12:00:04.319150
+Config  : ./apc.local/private/backups/20260523_120001-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260523_120001-apc_local-database.sql.gz         1.6MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260525_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-25 12:00:04.871482
+Config  : ./apc.local/private/backups/20260525_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260525_120002-apc_local-database.sql.gz         1.6MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260529_180002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-29 18:00:05.331105
+Config  : ./apc.local/private/backups/20260529_180002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260529_180002-apc_local-database.sql.gz         1.6MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260530_000002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-30 00:00:04.844647
+Config  : ./apc.local/private/backups/20260530_000002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260530_000002-apc_local-database.sql.gz         1.7MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260530_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-30 12:00:04.958012
+Config  : ./apc.local/private/backups/20260530_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260530_120002-apc_local-database.sql.gz         1.7MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260531_180003-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-05-31 18:00:05.620038
+Config  : ./apc.local/private/backups/20260531_180003-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260531_180003-apc_local-database.sql.gz         1.7MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260601_000002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-06-01 00:00:04.837908
+Config  : ./apc.local/private/backups/20260601_000002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260601_000002-apc_local-database.sql.gz         1.7MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260601_120002-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-06-01 12:00:06.429113
+Config  : ./apc.local/private/backups/20260601_120002-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260601_120002-apc_local-database.sql.gz         1.7MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260603_120001-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-06-03 12:00:03.981543
+Config  : ./apc.local/private/backups/20260603_120001-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260603_120001-apc_local-database.sql.gz         1.8MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260604_000004-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-06-04 00:00:09.088186
+Config  : ./apc.local/private/backups/20260604_000004-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260604_000004-apc_local-database.sql.gz         1.9MiB
+Backup for Site apc.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_f1147d3c17448983 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _f1147d3c17448983 | /usr/bin/gzip >> ./apc.local/private/backups/20260604_120004-apc_local-database.sql.gz
+
+Backup Summary for apc.local at 2026-06-04 12:00:10.554975
+Config  : ./apc.local/private/backups/20260604_120004-apc_local-site_config_backup.json 222.0B
+Database: ./apc.local/private/backups/20260604_120004-apc_local-database.sql.gz         1.9MiB
+Backup for Site apc.local has been successfully completed

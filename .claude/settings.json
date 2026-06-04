@@ -1,0 +1,9 @@
+{
+  "skills": [
+    {
+      "name": "ops-audit",
+      "description": "Analyze APC Operations outward movement system",
+      "prompt": "Analyze the APC Operations outward movement system developed so far in the codebase.\n\nInspect the codebase thoroughly and report:\n\n1. **Functional gaps** - What features are missing or incomplete?\n2. **Bugs** - Identify code issues, logic errors, or potential failures\n3. **Missing workflows** - Where are the workflow steps incomplete?\n4. **Frappe/ERPNext design issues** - Are there anti-patterns or improper use of the framework?\n5. **Zoho integration boundaries** - What integration points exist vs what's missing?\n6. **Priority changes needed next** - What should be fixed/implemented first?\n\nFocus areas:\n- Production scheduling\n- Transportation\n- Shipping\n- Quality\n- Outward movement workflow\n\nAnalysis approach:\n1. Read hooks.py to understand document events and workflows\n2. Examine key DocType controllers (job_order.py, shipping_booking.py, transport_schedule.py, security_inspection.py)\n3. Check API methods in api.py\n4. Review fixtures and permissions\n5. Identify auto-creation chains and status synchronization\n6. Look for TODO comments, incomplete implementations, or placeholder code\n\nReport findings in order of priority with specific file paths and line numbers where applicable."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+2026-05-21 11:30:21,361 ERROR frappe Error while inserting deferred Error Log record: Error Log 3c5apm4jj6: '<strong>Title</strong>' ([Errno 2] No such file or directory: '/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/shipping/page/shipping_dashboard') will get truncated, as max characters allowed is 140
+Site: apc.local
+Form Dict: {}
+2026-05-22 15:56:38,170 ERROR frappe New Exception collected in error log
+Site: apc.local
+Form Dict: {'name': 'shipping-dashboard', 'cmd': 'frappe.desk.desk_page.getpage'}
+2026-05-22 15:56:44,154 ERROR frappe New Exception collected in error log
+Site: apc.local
+Form Dict: {'name': 'shipping-dashboard', 'cmd': 'frappe.desk.desk_page.getpage'}
+2026-05-22 17:02:24,344 ERROR frappe Error while inserting deferred Error Log record: Error Log hm2vq00ol3: '<strong>Title</strong>' ([Errno 2] No such file or directory: '/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/shipping/page/shipping_dashboard') will get truncated, as max characters allowed is 140
+Site: apc.local
+Form Dict: {}
+2026-05-22 17:02:24,348 ERROR frappe Error while inserting deferred Error Log record: Error Log hm3plvo5dk: '<strong>Title</strong>' ([Errno 2] No such file or directory: '/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/shipping/page/shipping_dashboard') will get truncated, as max characters allowed is 140
+Site: apc.local
+Form Dict: {}
+2026-05-23 11:54:52,293 ERROR frappe New Exception collected in error log
+Site: apc.local
+Form Dict: {'name': 'shipping-dashboard', 'cmd': 'frappe.desk.desk_page.getpage'}
+2026-05-23 11:54:59,726 ERROR frappe New Exception collected in error log
+Site: apc.local
+Form Dict: {'name': 'shipping-dashboard', 'cmd': 'frappe.desk.desk_page.getpage'}
+2026-06-01 16:30:02,920 ERROR frappe New Exception collected in error log
+Site: apc.local
+Form Dict: {'job_order': 'JO-2026-00371', 'cmd': 'apc_operations.shipping.doctype.job_order.job_order.refresh_logistics_cost_summary_api'}
+2026-06-01 16:31:25,014 ERROR frappe New Exception collected in error log
+Site: apc.local
+Form Dict: {'job_order': 'JO-2026-00371', 'cmd': 'apc_operations.shipping.doctype.job_order.job_order.refresh_logistics_cost_summary_api'}
+2026-06-01 16:31:41,357 ERROR frappe New Exception collected in error log
+Site: apc.local
+Form Dict: {'job_order': 'JO-2026-00371', 'cmd': 'apc_operations.shipping.doctype.job_order.job_order.refresh_logistics_cost_summary_api'}
+2026-06-03 09:42:37,405 ERROR frappe New Exception collected in error log
+Site: apc.local
+Form Dict: {'cmd': 'apc_operations.services.consoles.get_loading_bay_queue'}

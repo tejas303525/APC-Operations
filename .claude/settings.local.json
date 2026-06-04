@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mysql *)",
+      "Bash(redis-cli -p 13000 KEYS \"*workspace*\")",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/inventory/doctype/item)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/inventory/doctype/grade)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/inventory/doctype/specification)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/inventory/doctype/packaging_type)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/inventory/doctype/warehouse)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/sales/doctype/apc_sales_demand)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/sales/doctype/apc_sales_demand_item)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/sales/doctype/apc_batch_allocation)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/sales/doctype/apc_batch_allocation_detail)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/production/doctype/apc_production_requirement)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/dispatch/doctype/apc_dispatch_order)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/dispatch/doctype/apc_dispatch_batch_detail)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/zoho/doctype/zoho_sync_log)",
+      "Bash(mkdir -p /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/services)",
+      "Bash(touch /home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/services/__init__.py)",
+      "Bash(python3 -c \"import json; json.load\\(open\\('apps/apc_operations/apc_operations/shipping/doctype/shipping_booking/shipping_booking.json'\\)\\)\")",
+      "Bash(grep -E \"doctype.*\\\\.json$\")"
+    ]
+  }
+}
