@@ -1,0 +1,2091 @@
+2026-04-27 14:57:14,398 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-27 14:57:16,244 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` ADD COLUMN `job_order` varchar(140)
+2026-04-27 14:57:16,261 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `freight_rate` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0
+2026-04-27 14:57:16,294 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` ADD INDEX `job_order_index`(`job_order`)
+2026-04-27 14:57:16,501 WARNING database DDL Query made to DB:
+create table `tabJob Order Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`product_name` varchar(140),
+`description` text,
+`quantity` decimal(21,9) not null default 0,
+`uom` varchar(140),
+`net_weight` decimal(21,9) not null default 0,
+`gross_weight` decimal(21,9) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-27 14:57:16,686 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob order` ADD COLUMN `customer` varchar(140), ADD COLUMN `customer_name` varchar(140), ADD COLUMN `date` date, ADD COLUMN `status` varchar(140) default 'Draft', ADD COLUMN `payment_terms` varchar(140), ADD COLUMN `pi_number` varchar(140), ADD COLUMN `packaging_name` varchar(140), ADD COLUMN `mode_of_transport` varchar(140), ADD COLUMN `port_of_loading` varchar(140), ADD COLUMN `port_of_discharge` varchar(140), ADD COLUMN `terms_of_delivery` varchar(140), ADD COLUMN `loading_instructions` text, ADD COLUMN `loading_remarks` text, ADD COLUMN `pallet_instructions` int(1) not null default 0, ADD COLUMN `labelling` text, ADD COLUMN `documents_required` longtext
+2026-04-27 14:57:16,726 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob order` ADD INDEX `customer_index`(`customer`), ADD INDEX `pi_number_index`(`pi_number`)
+2026-04-27 15:17:26,306 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-27 15:19:01,217 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-27 15:39:10,828 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-27 15:39:12,214 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `freight_rate` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0
+2026-04-27 15:39:12,447 WARNING database DDL Query made to DB:
+create table `tabJob Order` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`customer` varchar(140),
+`customer_name` varchar(140),
+`date` date,
+`status` varchar(140) default 'Draft',
+`payment_terms` varchar(140),
+`pi_number` varchar(140),
+`packaging_name` varchar(140),
+`mode_of_transport` varchar(140),
+`port_of_loading` varchar(140),
+`port_of_discharge` varchar(140),
+`terms_of_delivery` varchar(140),
+`loading_instructions` text,
+`loading_remarks` text,
+`pallet_instructions` int(1) not null default 0,
+`labelling` text,
+`documents_required` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `customer`(`customer`),
+index `pi_number`(`pi_number`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-27 15:41:33,477 WARNING database DDL Query made to DB:
+create table `tabUOM` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-27 15:41:59,654 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUOM` ADD COLUMN `uom` varchar(140)
+2026-04-27 15:49:30,785 WARNING database DDL Query made to DB:
+ALTER TABLE `tabCustomer` ADD COLUMN `customer_name` varchar(140), ADD COLUMN `country` varchar(140), ADD COLUMN `phnumber` varchar(140), ADD COLUMN `email` varchar(140), ADD COLUMN `trn_number` varchar(140), ADD COLUMN `location` varchar(140), ADD COLUMN `mark_it` longtext
+2026-04-27 16:02:00,579 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-27 16:32:45,815 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 09:06:40,926 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 09:14:24,037 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 10:30:20,387 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 10:30:21,320 WARNING database DDL Query made to DB:
+create table `tabDriver` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`driver_name` varchar(140) unique,
+`phone` varchar(140),
+`email` varchar(140),
+`status` varchar(140) default 'Active',
+`date_of_birth` date,
+`emergency_contact` varchar(140),
+`license_number` varchar(140),
+`license_type` varchar(140),
+`license_issue_date` date,
+`license_expiry` date,
+`license_issuing_authority` varchar(140),
+`background_check` varchar(140),
+`id_number` varchar(140),
+`passport_number` varchar(140),
+`nationality` varchar(140),
+`reference_check` varchar(140),
+`employment_type` varchar(140),
+`transporter` varchar(140),
+`hire_date` date,
+`termination_date` date,
+`termination_reason` text,
+`notes` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 10:30:21,560 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` ADD COLUMN `customer` varchar(140), ADD COLUMN `customer_name` varchar(140)
+2026-04-28 10:30:21,577 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `export_declaration` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `freight_rate` decimal(21,9) not null default 0
+2026-04-28 10:30:21,734 WARNING database DDL Query made to DB:
+create table `tabTransporter` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`company_name` varchar(140) unique,
+`business_registration_number` varchar(140),
+`tax_id` varchar(140),
+`status` varchar(140) default 'Active',
+`service_type` varchar(140),
+`established_date` date,
+`contact_person` varchar(140),
+`phone` varchar(140),
+`email` varchar(140),
+`alternate_phone` varchar(140),
+`fax` varchar(140),
+`website` varchar(140),
+`address_line1` varchar(140),
+`address_line2` varchar(140),
+`city` varchar(140),
+`state` varchar(140),
+`postal_code` varchar(140),
+`country` varchar(140),
+`coverage_areas` text,
+`vehicle_count` int(11) not null default 0,
+`driver_count` int(11) not null default 0,
+`operating_hours` text,
+`emergency_contact` varchar(140),
+`payment_terms` text,
+`insurance_expiry` date,
+`license_expiry` date,
+`contract_expiry` date,
+`document_remarks` longtext,
+`bank_name` varchar(140),
+`bank_account_number` varchar(140),
+`bank_branch` varchar(140),
+`swift_code` varchar(140),
+`notes` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 10:30:21,968 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` ADD COLUMN `job_order` varchar(140), ADD COLUMN `customer` varchar(140), ADD COLUMN `customer_name` varchar(140), ADD COLUMN `cro_number` varchar(140), ADD COLUMN `cro_date` date, ADD COLUMN `pickup_time` time(6), ADD COLUMN `gate_in_date` date, ADD COLUMN `pickup_location` varchar(140), ADD COLUMN `delivery_location` varchar(140), ADD COLUMN `port_of_discharge` varchar(140), ADD COLUMN `container_type` varchar(140), ADD COLUMN `cargo_weight` decimal(21,9) not null default 0, ADD COLUMN `assigned_vehicle` varchar(140), ADD COLUMN `assigned_driver` varchar(140), ADD COLUMN `transporter` varchar(140), ADD COLUMN `driver_phone` varchar(140), ADD COLUMN `transporter_contact` varchar(140), ADD COLUMN `transport_charges` decimal(21,9) not null default 0, ADD COLUMN `currency` varchar(140) default 'USD', ADD COLUMN `payables_status` varchar(140) default 'Pending', ADD COLUMN `invoice_reference` varchar(140), ADD COLUMN `payment_status` varchar(140), ADD COLUMN `security_dispatch` varchar(140), ADD COLUMN `dispatch_status` varchar(140), ADD COLUMN `dispatch_date` date, ADD COLUMN `gate_pass` varchar(140), ADD COLUMN `gate_pass_status` varchar(140)
+2026-04-28 10:30:21,986 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_status` varchar(140) default 'Pending Assignment'
+2026-04-28 10:30:22,180 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` ADD COLUMN `plate_number` varchar(140) unique, ADD COLUMN `make` varchar(140), ADD COLUMN `model` varchar(140), ADD COLUMN `year` int(11) not null default 0, ADD COLUMN `capacity` decimal(21,9) not null default 0, ADD COLUMN `capacity_uom` varchar(140), ADD COLUMN `status` varchar(140) default 'Active', ADD COLUMN `ownership_type` varchar(140), ADD COLUMN `transporter` varchar(140), ADD COLUMN `insurance_expiry` date, ADD COLUMN `registration_expiry` date, ADD COLUMN `last_maintenance_date` date, ADD COLUMN `next_maintenance_date` date, ADD COLUMN `maintenance_notes` longtext, ADD COLUMN `notes` longtext
+2026-04-28 10:30:22,181 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` ADD UNIQUE INDEX IF NOT EXISTS plate_number (`plate_number`)
+2026-04-28 11:07:35,126 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` ADD COLUMN `custom_job_order_number` varchar(140)
+2026-04-28 11:07:35,141 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-04-28 11:07:35,261 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0
+2026-04-28 11:19:26,455 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` ADD COLUMN `job_order_number` varchar(140)
+2026-04-28 11:20:22,237 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-28 11:22:19,596 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0
+2026-04-28 11:27:45,560 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0
+2026-04-28 11:46:17,540 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` ADD COLUMN `joborder` varchar(140)
+2026-04-28 11:46:17,552 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0
+2026-04-28 11:46:23,379 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-04-28 11:48:24,141 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` ADD COLUMN `custom_custom_jo_number` varchar(140)
+2026-04-28 12:09:52,457 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` ADD COLUMN `custom_incoterms` varchar(140)
+2026-04-28 13:14:44,196 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 13:14:45,478 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `freight_rate` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0
+2026-04-28 13:14:45,685 WARNING database DDL Query made to DB:
+create table `tabSecurity Draft Delivery Note` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`transport_schedule` varchar(140),
+`job_order` varchar(140),
+`shipping_booking` varchar(140),
+`customer` varchar(140),
+`transport_type` varchar(140) default 'Outward',
+`outward_type` varchar(140),
+`material_description` text,
+`container_type` varchar(140),
+`container_count` int(11) not null default 0,
+`vehicle` varchar(140),
+`driver` varchar(140),
+`transporter` varchar(140),
+`pickup_date` date,
+`pickup_time` time(6),
+`gate_out_status` varchar(140) default 'Pending Security Review',
+`security_status` varchar(140) default 'Pending Review',
+`security_notes` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `transport_schedule`(`transport_schedule`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 13:14:45,993 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` ADD COLUMN `source_document_type` varchar(140) default 'Manual', ADD COLUMN `incoterm` varchar(140), ADD COLUMN `supplier` varchar(140), ADD COLUMN `material_description` text, ADD COLUMN `gate_cutoff` date, ADD COLUMN `outward_type` varchar(140), ADD COLUMN `vehicle_type` varchar(140), ADD COLUMN `security_draft_delivery_note` varchar(140), ADD COLUMN `security_status` varchar(140) default 'Not Required', ADD COLUMN `transport_po_request` varchar(140)
+2026-04-28 13:14:46,011 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_type` varchar(140) default 'Outward', MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `payables_status` varchar(140) default 'Not Required', MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-28 13:14:46,182 WARNING database DDL Query made to DB:
+create table `tabTransport PO Request` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`transport_schedule` varchar(140),
+`job_order` varchar(140),
+`shipping_booking` varchar(140),
+`transport_type` varchar(140),
+`outward_type` varchar(140),
+`transporter` varchar(140),
+`vehicle` varchar(140),
+`driver` varchar(140),
+`scheduled_date` date,
+`pickup_location` varchar(140),
+`delivery_location` varchar(140),
+`transport_charges` decimal(21,9) not null default 0,
+`currency` varchar(140),
+`payables_status` varchar(140) default 'Pending Payables',
+`zoho_books_reference` varchar(140),
+`notes` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `transport_schedule`(`transport_schedule`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 13:14:46,374 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` ADD COLUMN `transport_requirement_status` varchar(140) default 'Pending Review', ADD COLUMN `transport_requirement_notes` text
+2026-04-28 14:24:59,424 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 14:40:55,324 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 14:40:56,477 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `freight_rate` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0
+2026-04-28 17:48:57,849 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 17:48:59,251 WARNING database DDL Query made to DB:
+create table `tabWeighment Slip` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`security_inspection` varchar(140),
+`job_order` varchar(140),
+`vehicle_number` varchar(140),
+`container_number` varchar(140),
+`slip_number` varchar(140),
+`weighment_date` date,
+`weighment_time` time(6),
+`gross_weight` decimal(21,9) not null default 0,
+`tare_weight` decimal(21,9) not null default 0,
+`net_weight` decimal(21,9) not null default 0,
+`weight_uom` varchar(140),
+`vehicle` varchar(140),
+`driver` varchar(140),
+`transporter` varchar(140),
+`remarks` text,
+`attachment` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `security_inspection`(`security_inspection`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 17:48:59,571 WARNING database DDL Query made to DB:
+create table `tabSecurity Inspection` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`job_order` varchar(140),
+`transportation_request` varchar(140),
+`shipping_booking` varchar(140),
+`customer` varchar(140),
+`customer_name` varchar(140),
+`inspection_type` varchar(140),
+`inspection_date` date,
+`inspection_time` time(6),
+`security_status` varchar(140) default 'Draft',
+`qc_status` varchar(140) default 'Not Sent',
+`receivables_status` varchar(140) default 'Not Applicable',
+`vehicle` varchar(140),
+`driver` varchar(140),
+`transporter` varchar(140),
+`vehicle_number` varchar(140),
+`driver_name` varchar(140),
+`driver_phone` varchar(140),
+`container_number` varchar(140),
+`container_type` varchar(140),
+`seal_number` varchar(140),
+`iso_number` varchar(140),
+`gross_weight` decimal(21,9) not null default 0,
+`tare_weight` decimal(21,9) not null default 0,
+`net_weight` decimal(21,9) not null default 0,
+`weight_uom` varchar(140),
+`gate_in_time` datetime(6),
+`gate_out_time` datetime(6),
+`weighment_slip` varchar(140),
+`material_description` text,
+`quantity` decimal(21,9) not null default 0,
+`uom` varchar(140),
+`qc_report_request` varchar(140),
+`qc_checked_by` varchar(140),
+`qc_checked_on` datetime(6),
+`qc_remarks` longtext,
+`loading_delivery_note` varchar(140),
+`loading_date` date,
+`loading_time` time(6),
+`special_instructions` longtext,
+`notes` longtext,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `job_order`(`job_order`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 17:48:59,776 WARNING database DDL Query made to DB:
+create table `tabLoading Delivery Note` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`security_inspection` varchar(140),
+`job_order` varchar(140),
+`transportation_request` varchar(140),
+`customer` varchar(140),
+`customer_name` varchar(140),
+`loading_date` date,
+`loading_time` time(6),
+`delivery_note_status` varchar(140) default 'Draft',
+`receivables_status` varchar(140) default 'Pending Receivables',
+`vehicle` varchar(140),
+`driver` varchar(140),
+`container_number` varchar(140),
+`seal_number` varchar(140),
+`material_description` text,
+`quantity` decimal(21,9) not null default 0,
+`uom` varchar(140),
+`qc_cleared_by` varchar(140),
+`qc_cleared_on` datetime(6),
+`qc_report_request` varchar(140),
+`reported_to_receivables_on` datetime(6),
+`reported_by` varchar(140),
+`invoice_reference` varchar(140),
+`payment_status` varchar(140),
+`notes` longtext,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `security_inspection`(`security_inspection`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 17:49:00,078 WARNING database DDL Query made to DB:
+create table `tabSecurity Checklist` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`security_inspection` varchar(140),
+`checklist_item` varchar(140),
+`required` int(1) not null default 0,
+`completed` int(1) not null default 0,
+`remarks` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 17:49:00,353 WARNING database DDL Query made to DB:
+create table `tabQC Report Request` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`security_inspection` varchar(140),
+`job_order` varchar(140),
+`loading_delivery_note` varchar(140),
+`requested_by` varchar(140),
+`requested_on` datetime(6),
+`inspection_type` varchar(140),
+`container_number` varchar(140),
+`material_description` text,
+`vehicle_number` varchar(140),
+`driver_name` varchar(140),
+`qc_status` varchar(140) default 'Pending QC',
+`qc_remarks` longtext,
+`qc_checked_by` varchar(140),
+`qc_checked_on` datetime(6),
+`notes` longtext,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `security_inspection`(`security_inspection`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-28 20:52:55,783 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 20:52:57,564 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-28 20:58:07,308 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-04-28 22:16:45,875 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-28 22:17:57,095 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-04-28 22:29:10,219 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 22:29:11,230 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-28 22:29:11,420 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSecurity Dispatch` ADD COLUMN `transport_schedule` varchar(140), ADD COLUMN `job_order` varchar(140), ADD COLUMN `customer` varchar(140), ADD COLUMN `customer_name` varchar(140), ADD COLUMN `security_status` varchar(140) default 'Draft', ADD COLUMN `vehicle` varchar(140), ADD COLUMN `driver` varchar(140)
+2026-04-28 22:29:11,757 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-28 22:37:49,870 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 22:37:50,993 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-28 22:37:51,434 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-28 22:43:41,974 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-28 22:43:43,016 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-28 22:43:43,468 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-04-29 14:21:42,710 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSecurity Inspection` MODIFY `quantity` decimal(21,9) not null default 0, MODIFY `gross_weight` decimal(21,9) not null default 0, MODIFY `tare_weight` decimal(21,9) not null default 0, MODIFY `net_weight` decimal(21,9) not null default 0
+2026-04-29 14:38:44,522 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-29 14:38:45,585 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-29 14:38:46,027 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-29 14:50:13,597 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-29 14:50:14,724 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-29 14:50:15,215 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-29 14:50:15,569 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSecurity Inspection` MODIFY `quantity` decimal(21,9) not null default 0, MODIFY `net_weight` decimal(21,9) not null default 0, MODIFY `tare_weight` decimal(21,9) not null default 0, MODIFY `gross_weight` decimal(21,9) not null default 0
+2026-04-29 15:02:59,347 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-29 15:03:00,530 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-29 15:03:01,006 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-29 15:03:01,176 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSecurity Draft Delivery Note` ADD INDEX `job_order_index`(`job_order`)
+2026-04-29 15:50:39,021 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-29 15:50:40,376 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-29 15:50:41,050 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-29 16:57:09,600 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-29 16:57:10,957 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` ADD COLUMN `incoterm` varchar(140)
+2026-04-29 16:57:10,974 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `freight_rate` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0
+2026-04-29 16:57:11,309 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0
+2026-04-29 16:57:11,488 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` ADD COLUMN `booking_requirement` varchar(140), ADD COLUMN `transport_required` int(1) not null default 0, ADD COLUMN `shipping_required` int(1) not null default 0, ADD COLUMN `transport_schedule` varchar(140), ADD COLUMN `shipping_booking` varchar(140), ADD COLUMN `transport_status` varchar(140), ADD COLUMN `shipping_status` varchar(140)
+2026-04-29 16:57:12,008 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-04-29 17:08:58,127 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-29 17:08:59,153 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-29 17:08:59,716 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-29 17:43:04,680 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-29 17:43:05,790 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-04-29 17:43:06,267 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-04-30 14:13:52,163 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-30 14:13:53,623 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-30 14:13:54,250 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-30 14:14:30,069 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-30 14:14:31,946 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0
+2026-04-30 14:14:32,517 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-04-30 14:36:53,836 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-04-30 14:36:55,282 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-04-30 14:36:55,874 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-05-01 11:17:04,955 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-05-01 11:17:06,120 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-05-01 11:17:06,577 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-05-01 11:17:06,687 WARNING database DDL Query made to DB:
+create table `tabProduction Capacity Configuration` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`production_category` varchar(140),
+`max_quantity_per_day` decimal(21,9) not null default 0,
+`uom` varchar(140),
+`active` int(1) not null default 1,
+`applies_from` date,
+`applies_to` date,
+`notes` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 11:17:06,968 WARNING database DDL Query made to DB:
+create table `tabProduction Order` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`production_order_number` varchar(140),
+`item_description` varchar(140),
+`planned_date` date,
+`status` varchar(140) default 'Draft',
+`required_quantity` decimal(21,9) not null default 0,
+`uom` varchar(140),
+`production_capacity_category` varchar(140),
+`capacity_quantity` decimal(21,9) not null default 0,
+`capacity_uom` varchar(140),
+`capacity_status` varchar(140) default 'Not Checked',
+`capacity_message` text,
+`notes` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `planned_date`(`planned_date`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 12:33:31,438 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-05-01 12:33:32,490 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0
+2026-05-01 12:33:32,981 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-05-01 12:33:33,151 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSecurity Dispatch` ADD COLUMN `material_description` text, ADD COLUMN `security_inspection` varchar(140)
+2026-05-01 13:52:33,598 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-05-01 14:04:06,295 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-05-01 14:04:07,609 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-05-01 14:04:07,870 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` ADD COLUMN `freight_borne_by` varchar(140), ADD COLUMN `transport_arranged_by` varchar(140), ADD COLUMN `shipping_arranged_by` varchar(140), ADD COLUMN `insurance_borne_by` varchar(140), ADD COLUMN `insurance_required` int(1) not null default 0, ADD COLUMN `risk_transfer_point` text, ADD COLUMN `insurance_policy_no` varchar(140), ADD COLUMN `insurance_value` decimal(21,9) not null default 0, ADD COLUMN `insurance_provider` varchar(140), ADD COLUMN `insurance_currency` varchar(140)
+2026-05-01 14:04:08,333 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0
+2026-05-01 14:04:08,498 WARNING database DDL Query made to DB:
+create table `tabAPC Production Requirement` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`sales_demand` varchar(140),
+`sales_demand_item` varchar(140),
+`customer` varchar(140),
+`status` varchar(140) default 'Draft',
+`priority` varchar(140),
+`item` varchar(140),
+`item_name` varchar(140),
+`grade` varchar(140),
+`specification` varchar(140),
+`packaging_type` varchar(140),
+`uom` varchar(140),
+`warehouse` varchar(140),
+`required_quantity` decimal(21,9) not null default 0,
+`produced_quantity` decimal(21,9) not null default 0,
+`remaining_quantity` decimal(21,9) not null default 0,
+`wip_quantity` decimal(21,9) not null default 0,
+`scheduled_quantity` decimal(21,9) not null default 0,
+`required_date` date,
+`planned_date` date,
+`production_order` varchar(140),
+`batch_created` int(1) not null default 0,
+`notes` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `sales_demand`(`sales_demand`),
+index `sales_demand_item`(`sales_demand_item`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:08,708 WARNING database DDL Query made to DB:
+create table `tabAPC COA` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`coa_number` varchar(140),
+`batch` varchar(140),
+`product` varchar(140),
+`coa_status` varchar(140) default 'Draft',
+`approval_status` varchar(140) default 'Pending',
+`manufacturing_date` date,
+`approved_by` varchar(140),
+`approved_date` datetime(6),
+`qc_remarks` longtext,
+`rejected_by` varchar(140),
+`rejected_date` datetime(6),
+`rejection_reason` text,
+`coa_pdf` text,
+`print_format_reference` varchar(140),
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `coa_number`(`coa_number`),
+index `batch`(`batch`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:09,067 WARNING database DDL Query made to DB:
+create table `tabAPC Batch` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`batch_number` varchar(140),
+`product` varchar(140),
+`grade` varchar(140),
+`specification` varchar(140),
+`packaging_type` varchar(140),
+`batch_status` varchar(140) default 'Active',
+`quality_status` varchar(140) default 'Pending QC',
+`warehouse` varchar(140),
+`linked_coa` varchar(140),
+`batch_quantity` decimal(21,9) not null default 0,
+`available_quantity` decimal(21,9) not null default 0,
+`allocated_quantity` decimal(21,9) not null default 0,
+`uom` varchar(140),
+`manufacturing_date` date,
+`expiry_date` date,
+`production_order` varchar(140),
+`production_batch_number` varchar(140),
+`qc_approved_by` varchar(140),
+`qc_approved_date` datetime(6),
+`qc_remarks` text,
+`created_from_demand` int(1) not null default 0,
+`created_from_production` int(1) not null default 0,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `batch_number`(`batch_number`),
+index `product`(`product`),
+index `grade`(`grade`),
+index `specification`(`specification`),
+index `packaging_type`(`packaging_type`),
+index `batch_status`(`batch_status`),
+index `quality_status`(`quality_status`),
+index `warehouse`(`warehouse`),
+index `manufacturing_date`(`manufacturing_date`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:09,166 WARNING database DDL Query made to DB:
+create table `tabCOA Test Parameter` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`test_name` varchar(140),
+`test_method` varchar(140),
+`specification` varchar(140),
+`result` varchar(140),
+`unit` varchar(140),
+`status` varchar(140),
+`remarks` text,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:09,276 WARNING database DDL Query made to DB:
+create table `tabAPC Sales Demand Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`item` varchar(140),
+`item_name` varchar(140),
+`grade` varchar(140),
+`specification` varchar(140),
+`packaging_type` varchar(140),
+`uom` varchar(140),
+`warehouse` varchar(140),
+`demand_quantity` decimal(21,9) not null default 0,
+`free_stock_available` decimal(21,9) not null default 0,
+`allocated_quantity` decimal(21,9) not null default 0,
+`production_required_quantity` decimal(21,9) not null default 0,
+`wip_production_quantity` decimal(21,9) not null default 0,
+`pending_allocation` decimal(21,9) not null default 0,
+`status` varchar(140) default 'Pending',
+index `item`(`item`),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:09,584 WARNING database DDL Query made to DB:
+create table `tabAPC Batch Allocation Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`sales_demand_item` varchar(140),
+`item` varchar(140),
+`item_name` varchar(140),
+`batch` varchar(140),
+`batch_number` varchar(140),
+`coa` varchar(140),
+`manufacturing_date` date,
+`fifo_sequence` int(11) not null default 0,
+`required_quantity` decimal(21,9) not null default 0,
+`allocated_quantity` decimal(21,9) not null default 0,
+`dispatched_quantity` decimal(21,9) not null default 0,
+`remaining_quantity` decimal(21,9) not null default 0,
+`warehouse` varchar(140),
+`status` varchar(140) default 'Allocated',
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:09,729 WARNING database DDL Query made to DB:
+create table `tabAPC Sales Demand` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`zoho_sales_order_id` varchar(140),
+`zoho_sales_order_number` varchar(140),
+`zoho_sync_status` varchar(140),
+`zoho_sync_date` datetime(6),
+`customer` varchar(140),
+`customer_name` varchar(140),
+`customer_reference` varchar(140),
+`sales_order_date` date,
+`required_dispatch_date` date,
+`priority` varchar(140),
+`status` varchar(140) default 'Draft',
+`total_demand_quantity` decimal(21,9) not null default 0,
+`total_allocated_quantity` decimal(21,9) not null default 0,
+`total_dispatched_quantity` decimal(21,9) not null default 0,
+`total_production_required_quantity` decimal(21,9) not null default 0,
+`allocation_status` varchar(140),
+`fulfillment_status` varchar(140),
+`notes` longtext,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `zoho_sales_order_id`(`zoho_sales_order_id`),
+index `zoho_sales_order_number`(`zoho_sales_order_number`),
+index `customer`(`customer`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:09,836 WARNING database DDL Query made to DB:
+create table `tabAPC Batch Allocation` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`allocation_number` varchar(140),
+`sales_demand` varchar(140),
+`customer` varchar(140),
+`customer_name` varchar(140),
+`allocation_status` varchar(140) default 'Draft',
+`allocation_date` date,
+`allocation_type` varchar(140),
+`total_required_quantity` decimal(21,9) not null default 0,
+`total_allocated_quantity` decimal(21,9) not null default 0,
+`total_dispatched_quantity` decimal(21,9) not null default 0,
+`notes` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `sales_demand`(`sales_demand`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:09,935 WARNING database DDL Query made to DB:
+create table `tabAPC Dispatch Batch Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`item` varchar(140),
+`item_name` varchar(140),
+`batch` varchar(140),
+`batch_number` varchar(140),
+`quantity` decimal(21,9) not null default 0,
+`uom` varchar(140),
+`coa` varchar(140),
+`manufacturing_date` date,
+`quality_status` varchar(140),
+`warehouse` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:55,877 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-05-01 14:04:57,059 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0
+2026-05-01 14:04:57,626 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0
+2026-05-01 14:04:57,886 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAPC Dispatch Batch Detail` MODIFY `quantity` decimal(21,9) not null default 0
+2026-05-01 14:04:58,190 WARNING database DDL Query made to DB:
+create table `tabAPC Dispatch COA Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`batch` varchar(140),
+`batch_number` varchar(140),
+`coa` varchar(140),
+`coa_number` varchar(140),
+`product` varchar(140),
+`manufacturing_date` date,
+`coa_pdf` text,
+`print_format_reference` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:58,330 WARNING database DDL Query made to DB:
+create table `tabAPC Dispatch Order` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`dispatch_number` varchar(140),
+`sales_demand` varchar(140),
+`batch_allocation` varchar(140),
+`customer` varchar(140),
+`dispatch_date` date,
+`status` varchar(140) default 'Draft',
+`dispatch_type` varchar(140),
+`delivery_address` text,
+`transporter` varchar(140),
+`vehicle_number` varchar(140),
+`driver_name` varchar(140),
+`lr_number` varchar(140),
+`lr_date` date,
+`eway_bill_number` varchar(140),
+`total_quantity` decimal(21,9) not null default 0,
+`total_dispatched_quantity` decimal(21,9) not null default 0,
+`notes` text,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `sales_demand`(`sales_demand`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 14:04:58,445 WARNING database DDL Query made to DB:
+create table `tabZoho Sync Log` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`sync_type` varchar(140),
+`sync_status` varchar(140),
+`sync_date` datetime(6),
+`zoho_id` varchar(140),
+`apc_document_type` varchar(140),
+`apc_document` varchar(140),
+`retry_count` int(11) not null default 0,
+`request_data` longtext,
+`response_data` longtext,
+`error_message` text,
+`error_details` longtext,
+`notes` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-01 15:36:38,260 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` ADD COLUMN `custom_job_order_number` varchar(140)
+2026-05-01 15:36:38,274 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `freight_rate` decimal(21,9) not null default 0
+2026-05-01 15:36:38,374 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `thc` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `freight_rate` decimal(21,9) not null default 0
+2026-05-01 20:54:06,657 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` ADD COLUMN `job_order_number` varchar(140)
+2026-05-01 20:54:06,678 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-05-01 21:02:28,402 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-05-01 21:02:29,453 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-05-01 21:02:29,972 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-05-01 21:02:30,226 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAPC Dispatch Batch Detail` MODIFY `quantity` decimal(21,9) not null default 0
+2026-05-01 21:08:21,778 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-05-01 21:21:50,691 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSecurity Draft Delivery Note` ADD COLUMN `custom_job_order_number` varchar(140)
+2026-05-01 21:23:23,986 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSecurity Draft Delivery Note` ADD COLUMN `job_order_number` varchar(140)
+2026-05-01 21:31:06,366 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` ADD COLUMN `job_order_number` varchar(140)
+2026-05-01 21:31:06,380 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `freight_rate` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0
+2026-05-01 21:31:09,722 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0, MODIFY `freight_rate` decimal(21,9) not null default 0
+2026-05-02 12:19:04,831 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-05-02 12:19:05,800 WARNING database DDL Query made to DB:
+ALTER TABLE `tabShipping Booking` MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `export_declaration` decimal(21,9) not null default 0, MODIFY `tluc` decimal(21,9) not null default 0, MODIFY `freight_rate` decimal(21,9) not null default 0, MODIFY `thc` decimal(21,9) not null default 0, MODIFY `total_freight_charges` decimal(21,9) not null default 0
+2026-05-02 12:19:06,089 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-05-02 12:19:06,541 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `fuel_cost` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0
+2026-05-02 12:19:07,170 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAPC Batch Allocation Detail` MODIFY `required_quantity` decimal(21,9) not null default 0, MODIFY `allocated_quantity` decimal(21,9) not null default 0, MODIFY `remaining_quantity` decimal(21,9) not null default 0
+2026-05-02 12:19:07,258 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAPC Dispatch Batch Detail` MODIFY `quantity` decimal(21,9) not null default 0
+2026-05-02 13:23:06,320 WARNING database DDL Query made to DB:
+create table `tabPOS Search Fields` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`field` varchar(140),
+`fieldname` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:06,429 WARNING database DDL Query made to DB:
+create table `tabPromotional Scheme Product Discount` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`disable` int(1) not null default 0,
+`apply_multiple_pricing_rules` int(1) not null default 0,
+`rule_description` text,
+`min_qty` decimal(21,9) not null default 0,
+`max_qty` decimal(21,9) not null default 0,
+`min_amount` decimal(21,9) not null default 0,
+`max_amount` decimal(21,9) not null default 0,
+`same_item` int(1) not null default 0,
+`free_item` varchar(140),
+`free_qty` decimal(21,9) not null default 0,
+`free_item_uom` varchar(140),
+`free_item_rate` decimal(21,9) not null default 0,
+`round_free_qty` int(1) not null default 0,
+`warehouse` varchar(140),
+`threshold_percentage` decimal(21,9) not null default 0,
+`priority` varchar(140),
+`is_recursive` int(1) not null default 0,
+`recurse_for` decimal(21,9) not null default 0,
+`apply_recursion_over` decimal(21,9) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:06,515 WARNING database DDL Query made to DB:
+create table `tabPayment Terms Template Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`payment_term` varchar(140),
+`description` text,
+`invoice_portion` decimal(21,9) not null default 0,
+`mode_of_payment` varchar(140),
+`due_date_based_on` varchar(140),
+`credit_days` int(11) not null default 0,
+`credit_months` int(11) not null default 0,
+`discount_type` varchar(140) default 'Percentage',
+`discount` decimal(21,9) not null default 0,
+`discount_validity_based_on` varchar(140) default 'Day(s) after invoice date',
+`discount_validity` int(11) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:06,589 WARNING database DDL Query made to DB:
+create table `tabPOS Item Group` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`item_group` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:06,837 WARNING database DDL Query made to DB:
+create table `tabItem Tax Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`title` varchar(140),
+`company` varchar(140),
+`disabled` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:06,948 WARNING database DDL Query made to DB:
+create table `tabBudget` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140),
+`budget_against` varchar(140) default 'Cost Center',
+`company` varchar(140),
+`cost_center` varchar(140),
+`project` varchar(140),
+`fiscal_year` varchar(140),
+`monthly_distribution` varchar(140),
+`amended_from` varchar(140),
+`applicable_on_material_request` int(1) not null default 0,
+`action_if_annual_budget_exceeded_on_mr` varchar(140) default 'Stop',
+`action_if_accumulated_monthly_budget_exceeded_on_mr` varchar(140) default 'Warn',
+`applicable_on_purchase_order` int(1) not null default 0,
+`action_if_annual_budget_exceeded_on_po` varchar(140) default 'Stop',
+`action_if_accumulated_monthly_budget_exceeded_on_po` varchar(140) default 'Warn',
+`applicable_on_booking_actual_expenses` int(1) not null default 0,
+`action_if_annual_budget_exceeded` varchar(140) default 'Stop',
+`action_if_accumulated_monthly_budget_exceeded` varchar(140) default 'Warn',
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:07,055 WARNING database DDL Query made to DB:
+create table `tabOverdue Payment` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`sales_invoice` varchar(140),
+`payment_schedule` varchar(140),
+`dunning_level` int(11) not null default 1,
+`payment_term` varchar(140),
+`description` text,
+`due_date` date,
+`overdue_days` varchar(140),
+`mode_of_payment` varchar(140),
+`invoice_portion` decimal(21,9) not null default 0,
+`payment_amount` decimal(21,9) not null default 0,
+`outstanding` decimal(21,9) not null default 0,
+`paid_amount` decimal(21,9) not null default 0,
+`discounted_amount` decimal(21,9) not null default 0,
+`interest` decimal(21,9) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:07,143 WARNING database DDL Query made to DB:
+create table `tabPricing Rule Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`pricing_rule` varchar(140),
+`item_code` varchar(140),
+`margin_type` varchar(140),
+`rate_or_discount` varchar(140),
+`child_docname` varchar(140),
+`rule_applied` int(1) not null default 1,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:07,248 WARNING database DDL Query made to DB:
+create table `tabPayment Schedule` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`payment_term` varchar(140),
+`description` text,
+`due_date` date,
+`invoice_portion` decimal(21,9) not null default 0,
+`mode_of_payment` varchar(140),
+`due_date_based_on` varchar(140),
+`credit_days` int(11) not null default 0,
+`credit_months` int(11) not null default 0,
+`discount_date` date,
+`discount` decimal(21,9) not null default 0,
+`discount_type` varchar(140) default 'Percentage',
+`discount_validity_based_on` varchar(140),
+`discount_validity` int(11) not null default 0,
+`payment_amount` decimal(21,9) not null default 0,
+`outstanding` decimal(21,9) not null default 0,
+`paid_amount` decimal(21,9) not null default 0,
+`discounted_amount` decimal(21,9) not null default 0,
+`base_payment_amount` decimal(21,9) not null default 0,
+`base_outstanding` decimal(21,9) not null default 0,
+`base_paid_amount` decimal(21,9) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:07,319 WARNING database DDL Query made to DB:
+create table `tabProcess Statement Of Accounts CC` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`cc` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:07,569 WARNING database DDL Query made to DB:
+create table `tabProcess Subscription` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`posting_date` date,
+`subscription` varchar(140),
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:07,757 WARNING database DDL Query made to DB:
+create table `tabPromotional Scheme` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`apply_on` varchar(140) default 'Item Code',
+`disable` int(1) not null default 0,
+`mixed_conditions` int(1) not null default 0,
+`is_cumulative` int(1) not null default 0,
+`apply_rule_on_other` varchar(140),
+`other_item_code` varchar(140),
+`other_item_group` varchar(140),
+`other_brand` varchar(140),
+`selling` int(1) not null default 0,
+`buying` int(1) not null default 0,
+`applicable_for` varchar(140),
+`valid_from` date,
+`valid_upto` date,
+`company` varchar(140),
+`currency` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:07,997 WARNING database DDL Query made to DB:
+create table `tabSales Invoice Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`barcode` varchar(140),
+`has_item_scanned` int(1) not null default 0,
+`item_code` varchar(140),
+`item_name` varchar(140),
+`customer_item_code` varchar(140),
+`description` longtext,
+`item_group` varchar(140),
+`brand` varchar(140),
+`image` text,
+`qty` decimal(21,9) not null default 0,
+`stock_uom` varchar(140),
+`uom` varchar(140),
+`conversion_factor` decimal(21,9) not null default 0,
+`stock_qty` decimal(21,9) not null default 0,
+`price_list_rate` decimal(21,9) not null default 0,
+`base_price_list_rate` decimal(21,9) not null default 0,
+`margin_type` varchar(140),
+`margin_rate_or_amount` decimal(21,9) not null default 0,
+`rate_with_margin` decimal(21,9) not null default 0,
+`discount_percentage` decimal(21,9) not null default 0,
+`discount_amount` decimal(21,9) not null default 0,
+`distributed_discount_amount` decimal(21,9) not null default 0,
+`base_rate_with_margin` decimal(21,9) not null default 0,
+`rate` decimal(21,9) not null default 0,
+`amount` decimal(21,9) not null default 0,
+`item_tax_template` varchar(140),
+`base_rate` decimal(21,9) not null default 0,
+`base_amount` decimal(21,9) not null default 0,
+`pricing_rules` text,
+`stock_uom_rate` decimal(21,9) not null default 0,
+`is_free_item` int(1) not null default 0,
+`grant_commission` int(1) not null default 0,
+`net_rate` decimal(21,9) not null default 0,
+`net_amount` decimal(21,9) not null default 0,
+`base_net_rate` decimal(21,9) not null default 0,
+`base_net_amount` decimal(21,9) not null default 0,
+`delivered_by_supplier` int(1) not null default 0,
+`income_account` varchar(140),
+`is_fixed_asset` int(1) not null default 0,
+`asset` varchar(140),
+`finance_book` varchar(140),
+`expense_account` varchar(140),
+`discount_account` varchar(140),
+`deferred_revenue_account` varchar(140),
+`service_stop_date` date,
+`enable_deferred_revenue` int(1) not null default 0,
+`service_start_date` date,
+`service_end_date` date,
+`weight_per_unit` decimal(21,9) not null default 0,
+`total_weight` decimal(21,9) not null default 0,
+`weight_uom` varchar(140),
+`warehouse` varchar(140),
+`target_warehouse` varchar(140),
+`quality_inspection` varchar(140),
+`serial_and_batch_bundle` varchar(140),
+`use_serial_batch_fields` int(1) not null default 0,
+`allow_zero_valuation_rate` int(1) not null default 0,
+`incoming_rate` decimal(21,9) not null default 0,
+`item_tax_rate` text,
+`actual_batch_qty` decimal(21,9) not null default 0,
+`serial_no` text,
+`batch_no` varchar(140),
+`actual_qty` decimal(21,9) not null default 0,
+`company_total_stock` decimal(21,9) not null default 0,
+`sales_order` varchar(140),
+`so_detail` varchar(140),
+`sales_invoice_item` varchar(140),
+`delivery_note` varchar(140),
+`dn_detail` varchar(140),
+`delivered_qty` decimal(21,9) not null default 0,
+`pos_invoice` varchar(140),
+`pos_invoice_item` varchar(140),
+`purchase_order` varchar(140),
+`purchase_order_item` varchar(140),
+`cost_center` varchar(140),
+`project` varchar(140),
+`page_break` int(1) not null default 0,
+index `item_code`(`item_code`),
+index `serial_and_batch_bundle`(`serial_and_batch_bundle`),
+index `batch_no`(`batch_no`),
+index `sales_order`(`sales_order`),
+index `so_detail`(`so_detail`),
+index `delivery_note`(`delivery_note`),
+index `dn_detail`(`dn_detail`),
+index `pos_invoice`(`pos_invoice`),
+index `purchase_order`(`purchase_order`),
+index `project`(`project`),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,069 WARNING database DDL Query made to DB:
+create table `tabPOS Profile User` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`default` int(1) not null default 0,
+`user` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,139 WARNING database DDL Query made to DB:
+create table `tabParty Account` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`company` varchar(140),
+`account` varchar(140),
+`advance_account` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,260 WARNING database DDL Query made to DB:
+create table `tabPayment Ledger Entry` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`posting_date` date,
+`company` varchar(140),
+`account_type` varchar(140),
+`account` varchar(140),
+`party_type` varchar(140),
+`party` varchar(140),
+`due_date` date,
+`voucher_detail_no` varchar(140),
+`cost_center` varchar(140),
+`finance_book` varchar(140),
+`voucher_type` varchar(140),
+`voucher_no` varchar(140),
+`against_voucher_type` varchar(140),
+`against_voucher_no` varchar(140),
+`amount` decimal(21,9) not null default 0,
+`account_currency` varchar(140),
+`amount_in_account_currency` decimal(21,9) not null default 0,
+`delinked` int(1) not null default 0,
+`remarks` text,
+`project` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `posting_date`(`posting_date`),
+index `company`(`company`),
+index `account`(`account`),
+index `party_type`(`party_type`),
+index `party`(`party`),
+index `voucher_detail_no`(`voucher_detail_no`),
+index `voucher_type`(`voucher_type`),
+index `voucher_no`(`voucher_no`),
+index `against_voucher_type`(`against_voucher_type`),
+index `against_voucher_no`(`against_voucher_no`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,349 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPayment Ledger Entry`
+				ADD INDEX IF NOT EXISTS `against_voucher_no_against_voucher_type_index`(against_voucher_no, against_voucher_type)
+2026-05-02 13:23:08,369 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPayment Ledger Entry`
+				ADD INDEX IF NOT EXISTS `voucher_no_voucher_type_index`(voucher_no, voucher_type)
+2026-05-02 13:23:08,508 WARNING database DDL Query made to DB:
+create table `tabExchange Rate Revaluation` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`posting_date` date,
+`rounding_loss_allowance` decimal(21,9) not null default 0.05,
+`company` varchar(140),
+`gain_loss_unbooked` decimal(21,9) not null default 0,
+`gain_loss_booked` decimal(21,9) not null default 0,
+`total_gain_loss` decimal(21,9) not null default 0,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,637 WARNING database DDL Query made to DB:
+create table `tabProcess Payment Reconciliation` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`company` varchar(140),
+`party_type` varchar(140),
+`party` varchar(140),
+`receivable_payable_account` varchar(140),
+`default_advance_account` varchar(140),
+`from_invoice_date` date,
+`to_invoice_date` date,
+`from_payment_date` date,
+`to_payment_date` date,
+`cost_center` varchar(140),
+`bank_cash_account` varchar(140),
+`status` varchar(140),
+`error_log` longtext,
+`amended_from` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,725 WARNING database DDL Query made to DB:
+create table `tabAccounting Dimension` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`document_type` varchar(140),
+`label` varchar(140) unique,
+`fieldname` varchar(140),
+`disabled` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index `document_type`(`document_type`),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,808 WARNING database DDL Query made to DB:
+create table `tabFinance Book` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`finance_book_name` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+`_seen` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,890 WARNING database DDL Query made to DB:
+create table `tabCampaign Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`campaign` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:08,995 WARNING database DDL Query made to DB:
+create table `tabPurchase Taxes and Charges` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`category` varchar(140) default 'Total',
+`add_deduct_tax` varchar(140) default 'Add',
+`charge_type` varchar(140) default 'On Net Total',
+`row_id` varchar(140),
+`included_in_print_rate` int(1) not null default 0,
+`included_in_paid_amount` int(1) not null default 0,
+`account_head` varchar(140),
+`description` text,
+`is_tax_withholding_account` int(1) not null default 0,
+`rate` decimal(21,9) not null default 0,
+`cost_center` varchar(140),
+`project` varchar(140),
+`account_currency` varchar(140),
+`tax_amount` decimal(21,9) not null default 0,
+`tax_amount_after_discount_amount` decimal(21,9) not null default 0,
+`total` decimal(21,9) not null default 0,
+`base_tax_amount` decimal(21,9) not null default 0,
+`base_total` decimal(21,9) not null default 0,
+`base_tax_amount_after_discount_amount` decimal(21,9) not null default 0,
+`item_wise_tax_detail` longtext,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,102 WARNING database DDL Query made to DB:
+create table `tabBank Account` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`account_name` varchar(140),
+`account` varchar(140),
+`bank` varchar(140),
+`account_type` varchar(140),
+`account_subtype` varchar(140),
+`disabled` int(1) not null default 0,
+`is_default` int(1) not null default 0,
+`is_company_account` int(1) not null default 0,
+`company` varchar(140),
+`party_type` varchar(140),
+`party` varchar(140),
+`iban` varchar(64),
+`branch_code` varchar(140),
+`bank_account_no` varchar(64),
+`integration_id` varchar(140) unique,
+`last_integration_date` date,
+`mask` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,172 WARNING database DDL Query made to DB:
+create table `tabSupplier Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`supplier` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,256 WARNING database DDL Query made to DB:
+create table `tabJournal Entry Template` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`template_title` varchar(140) unique,
+`voucher_type` varchar(140),
+`naming_series` varchar(140),
+`company` varchar(140),
+`is_opening` varchar(140) default 'No',
+`multi_currency` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,336 WARNING database DDL Query made to DB:
+create table `tabTax Category` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`title` varchar(140) unique,
+`disabled` int(1) not null default 0,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,447 WARNING database DDL Query made to DB:
+create table `tabSubscription` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`party_type` varchar(140),
+`party` varchar(140),
+`company` varchar(140),
+`status` varchar(140),
+`start_date` date,
+`end_date` date,
+`cancelation_date` date,
+`trial_period_start` date,
+`trial_period_end` date,
+`follow_calendar_months` int(1) not null default 0,
+`generate_new_invoices_past_due_date` int(1) not null default 0,
+`submit_invoice` int(1) not null default 1,
+`current_invoice_start` date,
+`current_invoice_end` date,
+`days_until_due` int(11) not null default 0,
+`generate_invoice_at` varchar(140) default 'End of the current subscription period',
+`number_of_days` int(11) not null default 0,
+`cancel_at_period_end` int(1) not null default 0,
+`sales_tax_template` varchar(140),
+`purchase_tax_template` varchar(140),
+`apply_additional_discount` varchar(140),
+`additional_discount_percentage` decimal(21,9) not null default 0,
+`additional_discount_amount` decimal(21,9) not null default 0,
+`cost_center` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,521 WARNING database DDL Query made to DB:
+create table `tabItem Tax Template Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`tax_type` varchar(140),
+`tax_rate` decimal(21,9) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,594 WARNING database DDL Query made to DB:
+create table `tabLoyalty Program Collection` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`tier_name` varchar(140),
+`min_spent` decimal(21,9) not null default 0,
+`collection_factor` decimal(21,9) not null default 0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,714 WARNING database DDL Query made to DB:
+create table `tabDunning` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`naming_series` varchar(140) default 'DUNN-.MM.-.YY.-',
+`customer` varchar(140),
+`customer_name` varchar(140),
+`company` varchar(140),
+`posting_date` date,
+`posting_time` time(6),
+`status` varchar(140) default 'Unresolved',
+`currency` varchar(140),
+`conversion_rate` decimal(21,9) not null default 0,
+`dunning_type` varchar(140),
+`rate_of_interest` decimal(21,9) not null default 0,
+`total_interest` decimal(21,2) not null default 0,
+`dunning_fee` decimal(21,2) not null default 0,
+`dunning_amount` decimal(21,9) not null default 0,
+`base_dunning_amount` decimal(21,9) not null default 0,
+`spacer` varchar(140),
+`total_outstanding` decimal(21,9) not null default 0,
+`grand_total` decimal(21,2) not null default 0,
+`language` varchar(140),
+`body_text` longtext,
+`letter_head` varchar(140),
+`closing_text` longtext,
+`income_account` varchar(140),
+`cost_center` varchar(140),
+`amended_from` varchar(140),
+`customer_address` varchar(140),
+`address_display` text,
+`contact_person` varchar(140),
+`contact_display` text,
+`contact_mobile` text,
+`contact_email` varchar(140),
+`company_address` varchar(140),
+`company_address_display` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:23:09,795 WARNING database DDL Query made to DB:
+create table `tabBank Transaction Payments` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`payment_document` varchar(140),
+`payment_entry` varchar(140),
+`allocated_amount` decimal(21,9) not null default 0,
+`clearance_date` date,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-05-02 13:31:54,143 WARNING database DDL Query made to DB:
+ALTER TABLE `tabQuotation Item` ADD COLUMN `tax_code` varchar(140), ADD COLUMN `tax_rate` decimal(21,9) not null default 0, ADD COLUMN `tax_amount` decimal(21,9) not null default 0, ADD COLUMN `total_amount` decimal(21,9) not null default 0
+2026-05-02 13:31:54,161 WARNING database DDL Query made to DB:
+ALTER TABLE `tabQuotation Item` MODIFY `base_price_list_rate` decimal(21,9) not null default 0, MODIFY `net_amount` decimal(21,9) not null default 0, MODIFY `qty` decimal(21,9) not null default 0, MODIFY `stock_qty` decimal(21,9) not null default 0, MODIFY `rate` decimal(21,9) not null default 0, MODIFY `base_rate_with_margin` decimal(21,9) not null default 0, MODIFY `actual_qty` decimal(21,9) not null default 0, MODIFY `net_rate` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `company_total_stock` decimal(21,9) not null default 0, MODIFY `base_rate` decimal(21,9) not null default 0, MODIFY `base_net_rate` decimal(21,9) not null default 0, MODIFY `base_net_amount` decimal(21,9) not null default 0, MODIFY `projected_qty` decimal(21,9) not null default 0, MODIFY `rate_with_margin` decimal(21,9) not null default 0, MODIFY `amount` decimal(21,9) not null default 0, MODIFY `conversion_factor` decimal(21,9) not null default 0, MODIFY `stock_uom_rate` decimal(21,9) not null default 0, MODIFY `distributed_discount_amount` decimal(21,9) not null default 0, MODIFY `discount_percentage` decimal(21,9) not null default 0, MODIFY `base_amount` decimal(21,9) not null default 0, MODIFY `margin_rate_or_amount` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `gross_profit` decimal(21,9) not null default 0, MODIFY `total_weight` decimal(21,9) not null default 0, MODIFY `price_list_rate` decimal(21,9) not null default 0, MODIFY `discount_amount` decimal(21,9) not null default 0, MODIFY `blanket_order_rate` decimal(21,9) not null default 0
+2026-05-02 13:31:54,241 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPurchase Invoice Item` ADD COLUMN `tax_code` varchar(140), ADD COLUMN `tax_rate` decimal(21,9) not null default 0, ADD COLUMN `tax_amount` decimal(21,9) not null default 0, ADD COLUMN `total_amount` decimal(21,9) not null default 0

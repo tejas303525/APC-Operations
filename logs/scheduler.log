@@ -1,0 +1,389 @@
+2026-06-25 09:15:52,231 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for apc.local
+2026-06-25 09:15:52,240 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for apc.local
+2026-06-25 09:15:52,245 ERROR scheduler Skipped queueing frappe.sessions.clear_expired_sessions because it was found in queue for apc.local
+2026-06-25 09:15:52,248 ERROR scheduler Skipped queueing frappe.core.doctype.log_settings.log_settings.run_log_clean_up because it was found in queue for apc.local
+2026-06-25 09:15:52,258 ERROR scheduler Skipped queueing erpnext.projects.doctype.task.task.set_tasks_as_overdue because it was found in queue for apc.local
+2026-06-25 09:15:52,261 ERROR scheduler Skipped queueing erpnext.stock.doctype.serial_no.serial_no.update_maintenance_status because it was found in queue for apc.local
+2026-06-25 09:15:52,263 ERROR scheduler Skipped queueing erpnext.setup.doctype.company.company.cache_companies_monthly_sales_history because it was found in queue for apc.local
+2026-06-25 09:15:52,265 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_drive.google_drive.daily_backup because it was found in queue for apc.local
+2026-06-25 09:15:52,267 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for apc.local
+2026-06-25 09:21:48,350 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:22:47,739 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:23:47,652 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:24:47,508 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:24:47,564 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:25:47,674 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:25:47,678 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:25:47,765 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:25:47,849 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:25:47,854 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:31:49,190 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 09:31:49,196 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 09:31:49,200 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for apc.local
+2026-06-25 09:31:49,229 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 09:31:49,232 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for apc.local
+2026-06-25 09:31:49,237 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:31:49,244 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for apc.local
+2026-06-25 09:31:49,271 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for apc.local
+2026-06-25 09:31:49,332 ERROR scheduler Skipped queueing apc_operations.shipping.services.zoho_dispatch_sync_service.pull_zoho_invoice_status because it was found in queue for apc.local
+2026-06-25 09:31:49,344 ERROR scheduler Skipped queueing frappe.utils.telemetry.pulse.client.send_queued_events because it was found in queue for apc.local
+2026-06-25 09:31:49,374 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for apc.local
+2026-06-25 09:32:49,524 ERROR scheduler Skipped queueing frappe.utils.telemetry.pulse.client.send_queued_events because it was found in queue for apc.local
+2026-06-25 09:32:49,545 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for apc.local
+2026-06-25 09:32:49,549 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 09:32:49,558 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for apc.local
+2026-06-25 09:32:49,567 ERROR scheduler Skipped queueing apc_operations.shipping.services.zoho_dispatch_sync_service.pull_zoho_invoice_status because it was found in queue for apc.local
+2026-06-25 09:32:49,569 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for apc.local
+2026-06-25 09:32:49,576 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 09:32:49,588 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for apc.local
+2026-06-25 09:32:49,591 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:32:49,612 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for apc.local
+2026-06-25 09:32:49,627 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 09:32:49,656 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:33:49,438 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:33:49,442 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for apc.local
+2026-06-25 09:33:49,464 ERROR scheduler Skipped queueing apc_operations.shipping.services.zoho_dispatch_sync_service.pull_zoho_invoice_status because it was found in queue for apc.local
+2026-06-25 09:33:49,480 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 09:33:49,490 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for apc.local
+2026-06-25 09:33:49,517 ERROR scheduler Skipped queueing frappe.utils.telemetry.pulse.client.send_queued_events because it was found in queue for apc.local
+2026-06-25 09:33:49,523 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:33:49,536 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:33:49,544 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for apc.local
+2026-06-25 09:33:49,549 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for apc.local
+2026-06-25 09:33:49,565 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:33:49,575 ERROR scheduler Skipped queueing erpnext.accounts.doctype.gl_entry.gl_entry.rename_gle_sle_docs because it was found in queue for apc.local
+2026-06-25 09:33:49,590 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:33:49,597 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 09:33:49,603 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 09:40:01,005 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:40:01,033 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:41:01,303 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:41:01,347 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:41:01,369 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:41:01,393 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:41:01,404 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:42:01,589 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:42:01,598 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:42:01,614 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:42:01,696 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:42:01,706 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:43:01,895 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:43:01,900 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:43:01,922 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:43:01,961 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:43:01,986 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 09:45:02,371 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:45:02,400 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:45:02,421 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:46:02,591 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for apc.local
+2026-06-25 09:46:02,602 ERROR scheduler Skipped queueing apc_operations.shipping.services.zoho_dispatch_sync_service.pull_zoho_invoice_status because it was found in queue for apc.local
+2026-06-25 09:46:02,615 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for apc.local
+2026-06-25 09:46:02,640 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:46:02,650 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:46:02,663 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 09:46:02,684 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for apc.local
+2026-06-25 09:46:02,693 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 09:46:02,706 ERROR scheduler Skipped queueing frappe.utils.telemetry.pulse.client.send_queued_events because it was found in queue for apc.local
+2026-06-25 09:46:02,719 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:46:02,736 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 09:46:02,745 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for apc.local
+2026-06-25 09:47:02,847 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for apc.local
+2026-06-25 09:47:02,853 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:47:02,858 ERROR scheduler Skipped queueing apc_operations.shipping.services.zoho_dispatch_sync_service.pull_zoho_invoice_status because it was found in queue for apc.local
+2026-06-25 09:47:02,864 ERROR scheduler Skipped queueing frappe.utils.telemetry.pulse.client.send_queued_events because it was found in queue for apc.local
+2026-06-25 09:47:02,878 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:47:02,882 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for apc.local
+2026-06-25 09:47:02,885 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for apc.local
+2026-06-25 09:47:02,902 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 09:47:02,904 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 09:47:02,916 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for apc.local
+2026-06-25 09:47:02,918 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:47:02,934 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 09:48:03,101 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:48:03,113 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:48:03,127 ERROR scheduler Skipped queueing frappe.utils.telemetry.pulse.client.send_queued_events because it was found in queue for apc.local
+2026-06-25 09:48:03,152 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:48:03,156 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 09:48:03,162 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for apc.local
+2026-06-25 09:48:03,195 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 09:48:03,200 ERROR scheduler Skipped queueing apc_operations.shipping.services.zoho_dispatch_sync_service.pull_zoho_invoice_status because it was found in queue for apc.local
+2026-06-25 09:48:03,202 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for apc.local
+2026-06-25 09:48:03,206 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 09:48:03,218 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for apc.local
+2026-06-25 09:48:03,223 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:48:03,237 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for apc.local
+2026-06-25 09:49:03,290 ERROR scheduler Skipped queueing erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs because it was found in queue for apc.local
+2026-06-25 09:49:03,292 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for apc.local
+2026-06-25 09:49:03,295 ERROR scheduler Skipped queueing frappe.utils.telemetry.pulse.client.send_queued_events because it was found in queue for apc.local
+2026-06-25 09:49:03,297 ERROR scheduler Skipped queueing frappe.deferred_insert.save_to_db because it was found in queue for apc.local
+2026-06-25 09:49:03,300 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:49:03,310 ERROR scheduler Skipped queueing frappe.utils.global_search.sync_global_search because it was found in queue for apc.local
+2026-06-25 09:49:03,322 ERROR scheduler Skipped queueing apc_operations.shipping.services.zoho_dispatch_sync_service.pull_zoho_invoice_status because it was found in queue for apc.local
+2026-06-25 09:49:03,340 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 09:49:03,342 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:49:03,349 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:49:03,368 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:49:03,383 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 09:49:03,386 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 09:53:04,289 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:53:04,364 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:54:04,564 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:54:04,575 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:55:04,678 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:55:04,713 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:56:04,879 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 09:56:04,947 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:56:04,950 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:57:05,077 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 09:57:05,101 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 09:57:05,154 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 09:57:05,158 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:01:05,936 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:01:05,948 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for apc.local
+2026-06-25 10:01:05,956 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 10:01:05,961 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 10:01:05,969 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for apc.local
+2026-06-25 10:01:05,972 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 10:01:05,980 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for apc.local
+2026-06-25 10:01:05,991 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for apc.local
+2026-06-25 10:01:05,994 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for apc.local
+2026-06-25 10:01:05,997 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for apc.local
+2026-06-25 10:01:06,004 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for apc.local
+2026-06-25 10:01:06,017 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for apc.local
+2026-06-25 10:01:06,019 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for apc.local
+2026-06-25 10:01:06,021 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for apc.local
+2026-06-25 10:01:06,030 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for apc.local
+2026-06-25 10:01:06,045 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for apc.local
+2026-06-25 10:01:06,049 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for apc.local
+2026-06-25 10:01:06,057 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_pending_cros because it was found in queue for apc.local
+2026-06-25 10:01:06,059 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 10:01:06,061 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for apc.local
+2026-06-25 10:01:06,064 ERROR scheduler Skipped queueing frappe.desk.utils.delete_old_exported_report_files because it was found in queue for apc.local
+2026-06-25 10:01:06,066 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_pending_pull_outs because it was found in queue for apc.local
+2026-06-25 10:01:06,070 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_upcoming_cutoffs because it was found in queue for apc.local
+2026-06-25 10:01:06,078 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for apc.local
+2026-06-25 10:02:06,179 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for apc.local
+2026-06-25 10:02:06,196 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for apc.local
+2026-06-25 10:02:06,201 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for apc.local
+2026-06-25 10:02:06,207 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 10:02:06,210 ERROR scheduler Skipped queueing frappe.desk.utils.delete_old_exported_report_files because it was found in queue for apc.local
+2026-06-25 10:02:06,216 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_upcoming_cutoffs because it was found in queue for apc.local
+2026-06-25 10:02:06,217 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for apc.local
+2026-06-25 10:02:06,247 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for apc.local
+2026-06-25 10:02:06,249 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 10:02:06,252 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for apc.local
+2026-06-25 10:02:06,254 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_pending_cros because it was found in queue for apc.local
+2026-06-25 10:02:06,265 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for apc.local
+2026-06-25 10:02:06,267 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_pending_pull_outs because it was found in queue for apc.local
+2026-06-25 10:02:06,273 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for apc.local
+2026-06-25 10:02:06,275 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for apc.local
+2026-06-25 10:02:06,278 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for apc.local
+2026-06-25 10:02:06,279 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for apc.local
+2026-06-25 10:02:06,281 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for apc.local
+2026-06-25 10:02:06,283 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for apc.local
+2026-06-25 10:02:06,287 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for apc.local
+2026-06-25 10:02:06,291 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 10:02:06,294 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 10:02:06,296 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:02:06,299 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for apc.local
+2026-06-25 10:03:06,430 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for apc.local
+2026-06-25 10:03:06,432 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 10:03:06,435 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_pending_pull_outs because it was found in queue for apc.local
+2026-06-25 10:03:06,437 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for apc.local
+2026-06-25 10:03:06,442 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for apc.local
+2026-06-25 10:03:06,445 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for apc.local
+2026-06-25 10:03:06,451 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for apc.local
+2026-06-25 10:03:06,455 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for apc.local
+2026-06-25 10:03:06,457 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 10:03:06,460 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_pending_cros because it was found in queue for apc.local
+2026-06-25 10:03:06,465 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:03:06,467 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for apc.local
+2026-06-25 10:03:06,470 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for apc.local
+2026-06-25 10:03:06,473 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for apc.local
+2026-06-25 10:03:06,479 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for apc.local
+2026-06-25 10:03:06,486 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 10:03:06,488 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_upcoming_cutoffs because it was found in queue for apc.local
+2026-06-25 10:03:06,490 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for apc.local
+2026-06-25 10:03:06,496 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for apc.local
+2026-06-25 10:03:06,504 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for apc.local
+2026-06-25 10:03:06,507 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 10:03:06,514 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for apc.local
+2026-06-25 10:03:06,519 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for apc.local
+2026-06-25 10:03:06,523 ERROR scheduler Skipped queueing frappe.desk.utils.delete_old_exported_report_files because it was found in queue for apc.local
+2026-06-25 10:04:06,616 ERROR scheduler Skipped queueing frappe.core.doctype.prepared_report.prepared_report.expire_stalled_report because it was found in queue for apc.local
+2026-06-25 10:04:06,623 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for apc.local
+2026-06-25 10:04:06,627 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for apc.local
+2026-06-25 10:04:06,634 ERROR scheduler Skipped queueing frappe.desk.utils.delete_old_exported_report_files because it was found in queue for apc.local
+2026-06-25 10:04:06,642 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_pending_pull_outs because it was found in queue for apc.local
+2026-06-25 10:04:06,645 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for apc.local
+2026-06-25 10:04:06,648 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for apc.local
+2026-06-25 10:04:06,654 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for apc.local
+2026-06-25 10:04:06,657 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for apc.local
+2026-06-25 10:04:06,671 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.hourly_reminder because it was found in queue for apc.local
+2026-06-25 10:04:06,682 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for apc.local
+2026-06-25 10:04:06,690 ERROR scheduler Skipped queueing frappe.model.utils.link_count.update_link_count because it was found in queue for apc.local
+2026-06-25 10:04:06,695 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for apc.local
+2026-06-25 10:04:06,697 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:04:06,702 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_pending_cros because it was found in queue for apc.local
+2026-06-25 10:04:06,708 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 10:04:06,719 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for apc.local
+2026-06-25 10:04:06,722 ERROR scheduler Skipped queueing frappe.search.sqlite_search.build_index_if_not_exists because it was found in queue for apc.local
+2026-06-25 10:04:06,732 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 10:04:06,734 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for apc.local
+2026-06-25 10:04:06,737 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for apc.local
+2026-06-25 10:04:06,739 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for apc.local
+2026-06-25 10:04:06,742 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for apc.local
+2026-06-25 10:04:06,747 ERROR scheduler Skipped queueing frappe.automation.doctype.reminder.reminder.send_reminders because it was found in queue for apc.local
+2026-06-25 10:04:06,749 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_upcoming_cutoffs because it was found in queue for apc.local
+2026-06-25 10:09:07,818 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:10:08,088 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:11:08,337 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:11:08,378 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 10:12:08,560 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 10:12:08,598 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:12:08,608 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 10:13:08,826 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:13:08,870 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:17:09,656 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:17:09,713 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:17:09,729 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:18:09,834 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:18:09,838 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:18:09,872 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:19:10,056 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:19:10,090 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:19:10,133 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:20:10,221 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:20:10,257 ERROR scheduler Skipped queueing frappe.email.queue.flush because it was found in queue for apc.local
+2026-06-25 10:20:10,264 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:20:10,288 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:25:11,286 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:25:11,358 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:26:11,491 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:26:11,498 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:27:11,615 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:27:11,636 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:33:12,801 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:37:13,623 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 10:37:13,677 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:37:13,681 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 10:45:15,442 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 10:45:15,520 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 11:01:18,547 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 11:01:18,567 ERROR scheduler Skipped queueing frappe.email.doctype.newsletter.newsletter.send_scheduled_email because it was found in queue for apc.local
+2026-06-25 11:01:18,570 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.collect_project_status because it was found in queue for apc.local
+2026-06-25 11:01:18,572 ERROR scheduler Skipped queueing frappe.website.doctype.personal_data_deletion_request.personal_data_deletion_request.process_data_deletion_request because it was found in queue for apc.local
+2026-06-25 11:01:18,575 ERROR scheduler Skipped queueing frappe.desk.page.backups.backups.delete_downloadable_backups because it was found in queue for apc.local
+2026-06-25 11:01:18,582 ERROR scheduler Skipped queueing frappe.desk.form.document_follow.send_hourly_updates because it was found in queue for apc.local
+2026-06-25 11:01:18,587 ERROR scheduler Skipped queueing frappe.twofactor.delete_all_barcodes_for_users because it was found in queue for apc.local
+2026-06-25 11:01:18,588 ERROR scheduler Skipped queueing erpnext.erpnext_integrations.doctype.plaid_settings.plaid_settings.automatic_synchronization because it was found in queue for apc.local
+2026-06-25 11:01:18,590 ERROR scheduler Skipped queueing erpnext.projects.doctype.project.project.project_status_update_reminder because it was found in queue for apc.local
+2026-06-25 11:01:18,592 ERROR scheduler Skipped queueing apc_operations.shipping.reminders.check_upcoming_cutoffs because it was found in queue for apc.local
+2026-06-25 11:01:18,598 ERROR scheduler Skipped queueing erpnext.stock.doctype.repost_item_valuation.repost_item_valuation.repost_entries because it was found in queue for apc.local
+2026-06-25 11:01:18,607 ERROR scheduler Skipped queueing frappe.website.doctype.web_page.web_page.check_publish_status because it was found in queue for apc.local
+2026-06-25 11:01:18,618 ERROR scheduler Skipped queueing frappe.model.utils.user_settings.sync_user_settings because it was found in queue for apc.local
+2026-06-25 11:01:18,621 ERROR scheduler Skipped queueing erpnext.utilities.doctype.video.video.update_youtube_data because it was found in queue for apc.local
+2026-06-25 11:01:18,636 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.notify_unreplied because it was found in queue for apc.local
+2026-06-25 11:01:18,637 ERROR scheduler Skipped queueing frappe.desk.utils.delete_old_exported_report_files because it was found in queue for apc.local
+2026-06-25 11:01:18,642 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 11:01:18,650 ERROR scheduler Skipped queueing frappe.oauth.delete_oauth2_data because it was found in queue for apc.local
+2026-06-25 11:01:18,658 ERROR scheduler Skipped queueing erpnext.utilities.bulk_transaction.retry because it was found in queue for apc.local
+2026-06-25 11:05:19,349 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 11:09:20,282 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 11:09:20,312 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 11:09:20,358 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 11:13:21,034 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 11:13:21,042 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 11:13:21,111 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 11:21:22,651 ERROR scheduler Skipped queueing frappe.email.doctype.email_account.email_account.pull because it was found in queue for apc.local
+2026-06-25 11:25:23,561 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 11:29:24,202 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 11:29:24,252 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 11:29:24,268 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 11:33:25,071 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 11:33:25,082 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 11:37:25,916 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 11:37:25,960 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 12:05:32,124 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 12:05:32,139 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 12:05:32,176 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 12:09:32,989 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 12:09:33,005 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 12:09:33,017 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 12:13:33,863 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 12:17:34,712 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 12:17:34,722 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 12:17:34,765 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-06-25 12:21:35,480 ERROR scheduler Skipped queueing frappe.email.queue.retry_sending_emails because it was found in queue for apc.local
+2026-06-25 12:21:35,525 ERROR scheduler Skipped queueing frappe.monitor.flush because it was found in queue for apc.local
+2026-06-25 12:21:35,544 ERROR scheduler Skipped queueing frappe.integrations.doctype.google_calendar.google_calendar.sync because it was found in queue for apc.local
+2026-07-07 15:32:53,510 ERROR scheduler Exception in Enqueue Events for Site apc.local
+Traceback (most recent call last):
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/database.py", line 842, in get_single_value
+    ).run()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_f1147d3c17448983'@'localhost' (using password: YES)")
+2026-07-07 15:33:53,621 ERROR scheduler Exception in Enqueue Events for Site apc.local
+Traceback (most recent call last):
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/database.py", line 842, in get_single_value
+    ).run()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: MariadbConnection | PostgresConnection = self.get_connection()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/home/it/Project/APC_Operations/frappe-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/it/Project/APC_Operations/frappe-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_f1147d3c17448983'@'localhost' (using password: YES)")

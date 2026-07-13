@@ -1,0 +1,507 @@
+2026-05-30 13:18:19,894 INFO ipython perms = frappe.get_all("DocPerm", filters={"parent": "Bank Account", "read": 1}, fields=["role", "read", "select"])
+2026-05-30 13:18:19,894 INFO ipython print("Bank Account read permissions:", perms)
+2026-05-30 13:18:19,895 INFO ipython # Simulate link search as Administrator vs check user roles
+2026-05-30 13:18:19,895 INFO ipython from frappe.desk.search import search_link
+2026-05-30 13:18:19,895 INFO ipython frappe.set_user("Administrator")
+2026-05-30 13:18:19,895 INFO ipython r1 = search_link(doctype="Bank Account", txt="", filters={"disabled": 0, "is_company_account": 1}, page_length=20)
+2026-05-30 13:18:19,895 INFO ipython print("\nAdmin search_link results:", [x.get("value") or x for x in (r1 or [])])
+2026-05-30 13:18:19,896 INFO ipython # Find shipping users
+2026-05-30 13:18:19,896 INFO ipython users = frappe.get_all("Has Role", filters={"role": ["in", ["Shipping User", "Shipping Manager"]]}, fields=["parent"], limit=5)
+2026-05-30 13:18:19,896 INFO ipython print("\nSample shipping users:", [u.parent for u in users])
+2026-05-30 13:18:19,896 INFO ipython === session end ===
+2026-05-30 13:18:36,364 INFO ipython === bench console session ===
+2026-05-30 13:18:36,364 INFO ipython import frappe
+2026-05-30 13:18:36,365 INFO ipython frappe.connect()
+2026-05-30 13:18:36,365 INFO ipython users = frappe.db.sql("""
+    SELECT DISTINCT hr.parent
+    FROM `tabHas Role` hr
+    INNER JOIN `tabUser` u ON u.name = hr.parent
+    WHERE hr.role IN ('Shipping User', 'Shipping Manager')
+      AND u.enabled = 1
+    LIMIT 10
+""", as_dict=1)
+2026-05-30 13:18:36,365 INFO ipython print("Shipping users:", users)
+2026-05-30 13:18:36,366 INFO ipython === session end ===
+2026-05-30 13:19:11,193 INFO ipython === bench console session ===
+2026-05-30 13:19:11,194 INFO ipython import frappe
+2026-05-30 13:19:11,194 INFO ipython frappe.connect()
+2026-05-30 13:19:11,194 INFO ipython # User permissions on Bank Account?
+2026-05-30 13:19:11,194 INFO ipython ups = frappe.get_all("User Permission", filters={"allow": "Bank Account"}, fields=["*"])
+2026-05-30 13:19:11,194 INFO ipython print("User Permissions on Bank Account:", ups)
+2026-05-30 13:19:11,194 INFO ipython # Check if HABIB is hidden by something
+2026-05-30 13:19:11,194 INFO ipython doc = frappe.get_doc("Bank Account", "HABIB - HABIB")
+2026-05-30 13:19:11,195 INFO ipython print("HABIB doc:", {k: doc.get(k) for k in ["name","disabled","is_company_account","company"]})
+2026-05-30 13:19:11,195 INFO ipython === session end ===
+2026-05-30 13:22:25,049 INFO ipython === bench console session ===
+2026-05-30 13:22:25,049 INFO ipython import frappe
+2026-05-30 13:22:25,049 INFO ipython errors = frappe.get_all("Error Log", filters={"creation": [">", "2026-05-29"]}, fields=["name", "creation", "method", "error"], order_by="creation desc", limit=10)
+2026-05-30 13:22:25,050 INFO ipython === session end ===
+2026-05-30 13:28:00,846 INFO ipython === bench console session ===
+2026-05-30 13:28:00,846 INFO ipython import traceback, frappe
+2026-05-30 13:28:00,846 INFO ipython frappe.connect()
+2026-05-30 13:28:00,846 INFO ipython pol = frappe.db.get_value('Port', {}, 'name')
+2026-05-30 13:28:00,846 INFO ipython pod = frappe.db.sql('SELECT name FROM `tabPort` WHERE name != %s LIMIT 1', pol)[0][0] if pol else pol
+2026-05-30 13:28:00,846 INFO ipython doc = frappe.get_doc({'doctype':'Job Order','job_order_number':'APCE/DEBUG/2026','customer':'Velencia Cosmetic Manufacturing LLC','date':'2028-08-17','status':'Confirmed','payment_terms':'100% CASH/TT/CDC AGAINST DELIVERY','terms_of_delivery':'FOB','mode_of_transport':'Sea','commercial_movement':'Export','port_of_loading':pol,'port_of_discharge':pod,'items':[{'item':'101','quantity':10,'uom':'MT'},{'item':'102','quantity':5,'uom':'MT'}]})
+2026-05-30 13:28:00,847 INFO ipython try:
+ doc.insert(ignore_permissions=True); print('SUCCESS', doc.name)
+except Exception as e:
+ traceback.print_exc()
+exit()
+2026-05-30 13:28:00,847 INFO ipython === session end ===
+2026-05-30 13:28:41,960 INFO ipython === bench console session ===
+2026-05-30 13:28:41,960 INFO ipython import frappe
+2026-05-30 13:28:41,960 INFO ipython frappe.connect()
+2026-05-30 13:28:41,961 INFO ipython from apc_operations.shipping.doctype.apc_operations_settings.apc_operations_settings import require_sales_demand_on_job_order
+2026-05-30 13:28:41,961 INFO ipython try:
+ print('flag', require_sales_demand_on_job_order())
+except Exception as e:
+ import traceback; traceback.print_exc()
+exit()
+2026-05-30 13:28:41,961 INFO ipython === session end ===
+2026-05-30 13:29:06,701 INFO ipython === bench console session ===
+2026-05-30 13:29:06,702 INFO ipython import traceback, frappe
+2026-05-30 13:29:06,702 INFO ipython frappe.connect()
+2026-05-30 13:29:06,702 INFO ipython uom = frappe.db.get_value('UOM', {}, 'name')
+2026-05-30 13:29:06,702 INFO ipython pol = frappe.db.get_value('Port', {}, 'name')
+2026-05-30 13:29:06,703 INFO ipython pod = frappe.db.sql('SELECT name FROM `tabPort` WHERE name != %s LIMIT 1', pol)[0][0]
+2026-05-30 13:29:06,703 INFO ipython doc = frappe.get_doc({'doctype':'Job Order','job_order_number':'APCE/DEBUG2/2026','customer':'Velencia Cosmetic Manufacturing LLC','date':'2028-08-17','status':'Confirmed','payment_terms':'100% CASH/TT/CDC AGAINST DELIVERY','terms_of_delivery':'FOB','mode_of_transport':'Sea','commercial_movement':'Export','port_of_loading':pol,'port_of_discharge':pod,'items':[{'item':'101','quantity':10,'uom':uom},{'item':'102','quantity':5,'uom':uom}]})
+2026-05-30 13:29:06,703 INFO ipython try:
+ doc.insert(ignore_permissions=True); print('SUCCESS', doc.name, doc.transport_schedule, doc.shipping_booking)
+except Exception:
+ traceback.print_exc()
+exit()
+2026-05-30 13:29:06,704 INFO ipython === session end ===
+2026-05-30 13:30:13,739 INFO ipython === bench console session ===
+2026-05-30 13:30:13,740 INFO ipython import traceback, frappe, json
+2026-05-30 13:30:13,740 INFO ipython frappe.connect()
+2026-05-30 13:30:13,740 INFO ipython from frappe.desk.form.save import savedocs
+2026-05-30 13:30:13,741 INFO ipython uom = frappe.db.get_value('UOM', {}, 'name')
+2026-05-30 13:30:13,741 INFO ipython pol = frappe.db.get_value('Port', {}, 'name')
+2026-05-30 13:30:13,741 INFO ipython pod = frappe.db.sql('SELECT name FROM `tabPort` WHERE name != %s LIMIT 1', pol)[0][0]
+2026-05-30 13:30:13,741 INFO ipython doc = {'docstatus':0,'doctype':'Job Order','name':'new-job-order-test123','__islocal':1,'__unsaved':1,'owner':'Administrator','job_order_number':'APCE/DEBUG3/2026','customer':'Velencia Cosmetic Manufacturing LLC','date':'2028-08-17','status':'Confirmed','payment_terms':'100% CASH/TT/CDC AGAINST DELIVERY','terms_of_delivery':'FOB','mode_of_transport':'Sea','commercial_movement':'Export','port_of_loading':pol,'port_of_discharge':pod,'bank_account':'HABIB','items':[{'docstatus':0,'doctype':'Job Order Item','name':'new-joi-1','__islocal':1,'__unsaved':1,'parent':'new-job-order-test123','parentfield':'items','parenttype':'Job Order','idx':1,'item':'101','quantity':10,'uom':uom}]}
+2026-05-30 13:30:13,741 INFO ipython frappe.form_dict.doc = json.dumps(doc)
+2026-05-30 13:30:13,741 INFO ipython frappe.form_dict.action = 'Save'
+2026-05-30 13:30:13,742 INFO ipython try:
+ r = savedocs(); print('OK', r)
+except Exception:
+ traceback.print_exc()
+exit()
+2026-05-30 13:30:13,742 INFO ipython === session end ===
+2026-05-30 13:30:28,137 INFO ipython === bench console session ===
+2026-05-30 13:30:28,137 INFO ipython import traceback, frappe, json
+2026-05-30 13:30:28,137 INFO ipython frappe.connect()
+2026-05-30 13:30:28,137 INFO ipython from frappe.desk.form.save import savedocs
+2026-05-30 13:30:28,137 INFO ipython uom = frappe.db.get_value('UOM', {}, 'name')
+2026-05-30 13:30:28,138 INFO ipython pol = frappe.db.get_value('Port', {}, 'name')
+2026-05-30 13:30:28,138 INFO ipython pod = frappe.db.sql('SELECT name FROM `tabPort` WHERE name != %s LIMIT 1', pol)[0][0]
+2026-05-30 13:30:28,138 INFO ipython doc = {'docstatus':0,'doctype':'Job Order','name':'new-job-order-test123','__islocal':1,'__unsaved':1,'owner':'Administrator','job_order_number':'APCE/DEBUG3/2026','customer':'Velencia Cosmetic Manufacturing LLC','date':'2028-08-17','status':'Confirmed','payment_terms':'100% CASH/TT/CDC AGAINST DELIVERY','terms_of_delivery':'FOB','mode_of_transport':'Sea','commercial_movement':'Export','port_of_loading':pol,'port_of_discharge':pod,'bank_account':'HABIB','items':[{'docstatus':0,'doctype':'Job Order Item','name':'new-joi-1','__islocal':1,'__unsaved':1,'parent':'new-job-order-test123','parentfield':'items','parenttype':'Job Order','idx':1,'item':'101','quantity':10,'uom':uom}]}
+2026-05-30 13:30:28,138 INFO ipython try:
+ r = savedocs(json.dumps(doc), 'Save'); print('OK', type(r))
+except Exception:
+ traceback.print_exc()
+exit()
+2026-05-30 13:30:28,138 INFO ipython === session end ===
+2026-06-01 15:27:16,554 INFO ipython === bench console session ===
+2026-06-01 15:27:16,554 INFO ipython import frappe
+2026-06-01 15:27:16,555 INFO ipython terms = [
+    "100% CASH /TT/CDC IN ADVANCE",
+    "100% cash In Advance Before Shipment/Loading",
+    "100% CASH/TT/CDC AGAINST DELIVERY",
+    "20% Advance Balance 80% against scan copy docs",
+    "25% Advance and Balance 75% CAD at sight thru bank",
+    "30 DAYS FROM INVOICE/DELIVERY DATE",
+    "30 DAYS PDC AGAINST DELIVERY",
+    "30 DAYS PDC IN ADVANCE",
+    "30% Advance Balance 70% against scan copy docs",
+    "50% Advance and Balance 50% CAD at sight thru bank",
+    "50% Advance Balance 50% against scan copy docs",
+    "60 DAYS FROM INVOICE /DELIVERY DATE",
+    "60 DAYS PDC AGAINST DELIVERY",
+    "60 DAYS PDC IN ADVANCE",
+    "90 DAYS FROM INVOICE/ DELIVERY DATE",
+    "90 DAYS PDC AGAINST DELIVERY",
+    "90 DAYS PDC IN ADVANCE",
+    "Avalised Draft 30 Days from Bill of Lading date",
+    "Avalised Draft 60 Days from Bill of Lading date",
+    "Avalised Draft 90 Days from Bill of Lading date",
+    "Cash against Documents (CAD)",
+    "Cash against Documents (CAD) Payable at sight through Bank",
+    "Confirm Letter of credit payable at 30 days from Bill of Lading date",
+    "Confirm Letter of credit payable at 60 days from Bill of Lading date",
+    "Confirm Letter of credit payable at 90 days from Bill of Lading date",
+    "Irrevocable Letter of Credit payable at sight",
+    "Payable at 30 days from Bill of Lading Date thru Bank",
+    "Payable at 30 days from Shipped on Board Date",
+    "Payable at 60 days from Bill of Lading Date thru Bank",
+    "Payable at 60 days from Shipped on Board Date",
+    "Payable at 90 days from Bill of Lading Date thru Bank",
+    "Payable at 90 days from Shipped on Board Date",
+]
+2026-06-01 15:27:16,555 INFO ipython def credit_days_for(name):
+    n = name.lower()
+    if "90 day" in n or "90 days" in n:
+        return 90
+    if "60 day" in n or "60 days" in n:
+        return 60
+    if "30 day" in n or "30 days" in n:
+        return 30
+    return 0
+2026-06-01 15:27:16,555 INFO ipython created = []
+2026-06-01 15:27:16,556 INFO ipython skipped = []
+2026-06-01 15:27:16,556 INFO ipython for name in terms:
+    if frappe.db.exists("Payment Term", name):
+        skipped.append(name)
+        continue
+    doc = frappe.get_doc({
+        "doctype": "Payment Term",
+        "payment_term_name": name,
+        "description": name,
+        "invoice_portion": 100,
+        "due_date_based_on": "Day(s) after invoice date",
+        "credit_days": credit_days_for(name),
+    })
+    doc.insert(ignore_permissions=True)
+    created.append(name)
+2026-06-01 15:27:16,556 INFO ipython frappe.db.commit()
+2026-06-01 15:27:16,557 INFO ipython print(f"Created: {len(created)}")
+2026-06-01 15:27:16,557 INFO ipython print(f"Skipped (already exist): {len(skipped)}")
+2026-06-01 15:27:16,557 INFO ipython if created:
+    print("Created:", *created[:3], "..." if len(created) > 3 else "")
+if skipped:
+    print("Skipped:", *skipped[:3], "..." if len(skipped) > 3 else "")
+total = frappe.db.count("Payment Term")
+2026-06-01 15:27:16,558 INFO ipython print(f"Total Payment Term records: {total}")
+2026-06-01 15:27:16,558 INFO ipython === session end ===
+2026-06-01 16:36:47,994 INFO ipython === bench console session ===
+2026-06-01 16:36:47,994 INFO ipython import apc_operations.patches.v0_6.sync_logistics_print_formats as p
+2026-06-01 16:36:47,995 INFO ipython p.execute()
+2026-06-01 16:36:47,995 INFO ipython frappe.db.commit()
+2026-06-01 16:36:47,995 INFO ipython print("synced")
+2026-06-01 16:36:47,995 INFO ipython === session end ===
+2026-06-01 16:39:07,665 INFO ipython === bench console session ===
+2026-06-01 16:39:07,665 INFO ipython company = frappe.db.get_default("company") or frappe.db.get_single_value("Global Defaults", "default_company")
+2026-06-01 16:39:07,666 INFO ipython logo = frappe.db.get_value("Company", company, "company_logo") if company else None
+2026-06-01 16:39:07,666 INFO ipython print("company:", company)
+2026-06-01 16:39:07,666 INFO ipython print("company_logo:", logo)
+2026-06-01 16:39:07,667 INFO ipython === session end ===
+2026-06-01 16:39:57,620 INFO ipython === bench console session ===
+2026-06-01 16:39:57,620 INFO ipython import apc_operations.patches.v0_6.sync_logistics_print_formats as p
+2026-06-01 16:39:57,620 INFO ipython p.execute()
+2026-06-01 16:39:57,620 INFO ipython frappe.db.commit()
+2026-06-01 16:39:57,620 INFO ipython print("done")
+2026-06-01 16:39:57,620 INFO ipython === session end ===
+2026-06-01 16:45:33,375 INFO ipython === bench console session ===
+2026-06-01 16:45:33,375 INFO ipython rows = frappe.get_all("Job Order Item", filters={"parent": "JO-2026-00371"}, fields=["*"])
+2026-06-01 16:45:33,375 INFO ipython === session end ===
+2026-06-01 16:46:10,015 INFO ipython === bench console session ===
+2026-06-01 16:46:10,015 INFO ipython import apc_operations.patches.v0_6.sync_logistics_print_formats as p
+2026-06-01 16:46:10,015 INFO ipython p._sync_print_format("Standard Job Order", "Job Order", "Shipping", "standard_job_order", "standard_job_order")
+2026-06-01 16:46:10,016 INFO ipython frappe.db.commit()
+2026-06-01 16:46:10,016 INFO ipython print("ok")
+2026-06-01 16:46:10,016 INFO ipython === session end ===
+2026-06-02 14:51:07,025 INFO ipython === bench console session ===
+2026-06-02 14:51:07,025 INFO ipython import frappe
+2026-06-02 14:51:07,025 INFO ipython from apc_operations.services.customer_link_service import resolve_transport_schedule_customer, resolve_customer_docname
+2026-06-02 14:51:07,026 INFO ipython === session end ===
+2026-06-03 09:57:16,130 INFO ipython === bench console session ===
+2026-06-03 09:57:16,131 INFO ipython import frappe
+2026-06-03 09:57:16,131 INFO ipython === session end ===
+2026-06-03 11:32:30,252 INFO ipython === bench console session ===
+2026-06-03 11:32:30,252 INFO ipython import frappe
+2026-06-03 11:32:30,253 INFO ipython print("Profile table:", frappe.db.table_exists("tabAPC Product Packing Profile"))
+2026-06-03 11:32:30,253 INFO ipython print("Tare table:", frappe.db.table_exists("tabAPC Packaging Tare"))
+2026-06-03 11:32:30,253 INFO ipython print("Patch log:", frappe.db.get_value("Patch Log", {"patch": "apc_operations.patches.v0_8.import_product_packing_matrix"}, "patch"))
+2026-06-03 11:32:30,253 INFO ipython === session end ===
+2026-06-03 11:33:37,341 INFO ipython === bench console session ===
+2026-06-03 11:33:37,342 INFO ipython import frappe
+2026-06-03 11:33:37,342 INFO ipython from frappe.model.sync import sync_for
+2026-06-03 11:33:37,342 INFO ipython sync_for("apc_operations", force=True)
+2026-06-03 11:33:37,342 INFO ipython frappe.db.commit()
+2026-06-03 11:33:37,342 INFO ipython print("Profile table:", frappe.db.table_exists("tabAPC Product Packing Profile"))
+2026-06-03 11:33:37,343 INFO ipython print("Tare table:", frappe.db.table_exists("tabAPC Packaging Tare"))
+2026-06-03 11:33:37,343 INFO ipython from apc_operations.shipping.services.packing_matrix_import_service import import_packing_matrix_from_csv
+2026-06-03 11:33:37,343 INFO ipython print(import_packing_matrix_from_csv())
+2026-06-03 11:33:37,343 INFO ipython === session end ===
+2026-06-03 11:34:01,565 INFO ipython === bench console session ===
+2026-06-03 11:34:01,566 INFO ipython import frappe
+2026-06-03 11:34:01,566 INFO ipython print("table_exists:", frappe.db.table_exists("tabAPC Product Packing Profile"))
+2026-06-03 11:34:01,566 INFO ipython from apc_operations.shipping.services.packing_matrix_import_service import import_packing_matrix_from_csv
+2026-06-03 11:34:01,566 INFO ipython print(import_packing_matrix_from_csv())
+2026-06-03 11:34:01,566 INFO ipython print("Profile count:", frappe.db.count("APC Product Packing Profile"))
+2026-06-03 11:34:01,566 INFO ipython print("Tare count:", frappe.db.count("APC Packaging Tare"))
+2026-06-03 11:34:01,567 INFO ipython === session end ===
+2026-06-03 11:34:31,640 INFO ipython === bench console session ===
+2026-06-03 11:34:31,640 INFO ipython import frappe
+2026-06-03 11:34:31,641 INFO ipython from apc_operations.shipping.services.packing_matrix_import_service import import_packing_matrix_from_csv
+2026-06-03 11:34:31,641 INFO ipython print(import_packing_matrix_from_csv())
+2026-06-03 11:34:31,641 INFO ipython print("Profiles:", frappe.db.count("APC Product Packing Profile"))
+2026-06-03 11:34:31,641 INFO ipython print("Tare:", frappe.db.count("APC Packaging Tare"))
+2026-06-03 11:34:31,642 INFO ipython === session end ===
+2026-06-03 11:35:04,949 INFO ipython === bench console session ===
+2026-06-03 11:35:04,950 INFO ipython import frappe
+2026-06-03 11:35:04,950 INFO ipython from apc_operations.shipping.services.packing_matrix_import_service import resolve_item_for_matrix
+2026-06-03 11:35:04,950 INFO ipython === session end ===
+2026-06-03 12:21:10,197 INFO ipython === bench console session ===
+2026-06-03 12:21:10,197 INFO ipython import frappe
+2026-06-03 12:21:10,197 INFO ipython print("profiles:", frappe.db.count("APC Product Packing Profile"))
+2026-06-03 12:21:10,198 INFO ipython eth = frappe.get_all("APC Product Packing Profile", filters={"product_name_alias": "ETHYL ACETATE"}, fields=["name", "item", "packing_unit_type", "product_fill_kg"])
+2026-06-03 12:21:10,198 INFO ipython print("ETHYL ACETATE profiles:", len(eth))
+2026-06-03 12:21:10,198 INFO ipython for e in eth[:3]:
+    print(e)
+print("item 101:", frappe.db.get_value("APC Product Packing Profile", {"item": "101"}, ["name", "product_name_alias"], as_dict=1))
+2026-06-03 12:21:10,199 INFO ipython === session end ===
+2026-06-05 16:50:44,146 INFO ipython === bench console session ===
+2026-06-05 16:50:44,152 INFO ipython import frappe
+
+ldn = frappe.get_doc("Loading Delivery Note", "LDN-2026-00741")
+
+print("LDN:", ldn.name)
+print("DO:", ldn.transport_delivery_order)
+print("Security Inspection:", ldn.security_inspection)
+print("LDN loading_end_time:", getattr(ldn, "loading_end_time", None))
+
+if ldn.security_inspection:
+    print(
+        "SI loading_end_time:",
+        frappe.db.get_value("Security Inspection", ldn.security_inspection, "loading_end_time")
+    )
+
+print("Before:")
+print("actual_loaded_packaging_tare_kg:", ldn.actual_loaded_packaging_tare_kg)
+print("estimated_actual_product_net_kg:", ldn.estimated_actual_product_net_kg)
+print("weight_variance_status:", ldn.weight_variance_status)
+
+ldn.save(ignore_permissions=True)
+frappe.db.commit()
+
+ldn.reload()
+
+print("After:")
+print("actual_loaded_packaging_tare_kg:", ldn.actual_loaded_packaging_tare_kg)
+print("estimated_actual_product_net_kg:", ldn.estimated_actual_product_net_kg)
+print("weight_variance_qty:", ldn.weight_variance_qty)
+print("weight_variance_pct:", ldn.weight_variance_pct)
+print("weight_variance_status:", ldn.weight_variance_status)
+2026-06-05 16:50:44,152 INFO ipython === session end ===
+2026-06-06 16:47:28,823 INFO ipython === bench console session ===
+2026-06-06 16:47:28,824 INFO ipython import frappe
+
+profiles = frappe.get_all(
+    "APC Product Packing Profile",
+    filters={
+        "item": "101",
+        "active": 1,
+    },
+    fields=[
+        "name",
+        "item",
+        "item_name",
+        "packaging_type",
+        "packing_material",
+        "packing_unit_type",
+        "product_fill_kg",
+        "ibc_fill_kg",
+        "flexi_fill_mt",
+        "empty_packaging_kg",
+        "unit_gross_kg",
+        "modified",
+    ],
+    order_by="packaging_type, packing_material, packing_unit_type, modified desc",
+)
+
+for p in profiles:
+    print(p)
+    
+2026-06-06 16:47:28,824 INFO ipython from collections import defaultdict
+
+groups = defaultdict(list)
+
+for p in profiles:
+    key = (
+        p.packaging_type,
+        p.packing_material,
+        p.packing_unit_type,
+    )
+    groups[key].append(p.name)
+
+for key, names in groups.items():
+    if len(names) > 1:
+        print("DUPLICATE:", key, names)
+        
+2026-06-06 16:47:28,824 INFO ipython git status --short
+git diff --stat
+git diff --check
+2026-06-06 16:47:28,824 INFO ipython === session end ===
+2026-07-10 15:43:13,911 INFO ipython === bench console session ===
+2026-07-10 15:43:13,911 INFO ipython  frappe.get_all("APC Product Packing Profile", filters={"item": "101", "active": 1}, fields=["name", "packaging_type", "packing_unit_type", "packing_material"])
+2026-07-10 15:43:13,911 INFO ipython   from apc_operations.shipping.services.packing_calculation_service import calculate_job_order_item_packing
+  result = calculate_job_order_item_packing(
+      item_row={"item": "101", "packaging_type": "Steel Drum", "packaging_qty": 80, "uom": "Metric Ton"},
+      shipment_type="Export",
+      container_type="20FT Standard",
+      container_quantity=1
+  )
+  print(result)
+2026-07-10 15:43:13,911 INFO ipython bench build --app apc_operations
+2026-07-10 15:43:13,911 INFO ipython bench build --app apc_operationsqq
+2026-07-10 15:43:13,911 INFO ipython q
+2026-07-10 15:43:13,911 INFO ipython === session end ===
+2026-07-10 15:57:45,431 INFO ipython === bench console session ===
+2026-07-10 15:57:45,431 INFO ipython import frappe
+2026-07-10 15:57:45,432 INFO ipython meta = frappe.get_meta('Job Order')
+2026-07-10 15:57:45,432 INFO ipython print('module:', meta.module)
+2026-07-10 15:57:45,432 INFO ipython print('controller:', frappe.scrub(meta.module), meta.name)
+2026-07-10 15:57:45,432 INFO ipython === session end ===
+2026-07-13 09:19:05,113 INFO ipython === bench console session ===
+2026-07-13 09:19:05,114 INFO ipython import frappe
+2026-07-13 09:19:05,114 INFO ipython do = frappe.db.get_value("Delivery Order", "APCETEST102", [
+    "name", "job_order", "operational_status", "do_status",
+    "docstatus", "loading_delivery_note", "third_party_loading",
+    "commercial_movement", "pre_check_clearance", "sent_to_security_on",
+    "truck_arrived_on"
+], as_dict=True)
+2026-07-13 09:19:05,114 INFO ipython === session end ===
+2026-07-13 09:40:03,156 INFO ipython === bench console session ===
+2026-07-13 09:40:03,156 INFO ipython import frappe, json
+2026-07-13 09:40:03,157 INFO ipython do = frappe.get_doc("Delivery Order", "DO-2026-00033-1")
+2026-07-13 09:40:03,157 INFO ipython print("docstatus:", do.docstatus, "do_status:", do.get("do_status"), "third_party_loading:", do.get("third_party_loading"))
+2026-07-13 09:40:03,157 INFO ipython print("operational_status:", do.get("operational_status"))
+2026-07-13 09:40:03,157 INFO ipython print("job_order:", do.get("job_order"))
+2026-07-13 09:40:03,157 INFO ipython items = do.get("items") if hasattr(do, "items") else None
+2026-07-13 09:40:03,158 INFO ipython for it in (do.get("items") or []):
+    print("item:", it.get("item_code"), it.get("batch_no"), it.get("qty"), it.get("uom"))
+pcc = frappe.get_all("APC Pre-Check Clearance", filters={"delivery_order": do.name}, fields=["name","qc_status","overall_status","batch_no"], limit=5)
+2026-07-13 09:40:03,158 INFO ipython print("PCC:", pcc)
+2026-07-13 09:40:03,158 INFO ipython ldn = frappe.db.get_value("Loading Delivery Note", {"delivery_order": do.name}, "name")
+2026-07-13 09:40:03,158 INFO ipython print("LDN:", ldn)
+2026-07-13 09:40:03,158 INFO ipython === session end ===
+2026-07-13 09:43:18,424 INFO ipython === bench console session ===
+2026-07-13 09:43:18,425 INFO ipython import frappe
+2026-07-13 09:43:18,425 INFO ipython do = frappe.get_doc("Delivery Order", "DO-2026-00033-1")
+2026-07-13 09:43:18,425 INFO ipython print("docstatus:", do.docstatus, "do_status:", do.get("do_status"), "third_party_loading:", do.get("third_party_loading"))
+2026-07-13 09:43:18,425 INFO ipython print("operational_status:", do.get("operational_status"))
+2026-07-13 09:43:18,425 INFO ipython print("job_order:", do.get("job_order"), "pre_check_clearance:", do.get("pre_check_clearance"))
+2026-07-13 09:43:18,425 INFO ipython for it in (do.get("items") or []):
+    print("item:", it.get("item_code"), it.get("batch_no"), it.get("qty"), it.get("uom"), it.get("packaging_qty") if hasattr(it, "packaging_qty") else None)
+pcc_name = do.get("pre_check_clearance")
+2026-07-13 09:43:18,426 INFO ipython if pcc_name:
+    pcc = frappe.get_doc("Pre-Check Clearance", pcc_name)
+    print("PCC:", pcc.name, pcc.get("qc_status"), pcc.get("overall_status"), pcc.get("batch_no"))
+ldn = frappe.db.get_value("Loading Delivery Note", {"delivery_order": do.name}, "name")
+2026-07-13 09:43:18,426 INFO ipython print("LDN:", ldn)
+2026-07-13 09:43:18,426 INFO ipython frappe.db.rollback()
+2026-07-13 09:43:18,426 INFO ipython === session end ===
+2026-07-13 09:44:11,300 INFO ipython === bench console session ===
+2026-07-13 09:44:11,300 INFO ipython import frappe
+2026-07-13 09:44:11,300 INFO ipython do = frappe.get_doc("Delivery Order", "DO-2026-00033-1")
+2026-07-13 09:44:11,300 INFO ipython print("docstatus:", do.docstatus, "do_status:", do.get("do_status"), "third_party_loading:", do.get("third_party_loading"))
+2026-07-13 09:44:11,300 INFO ipython print("operational_status:", do.get("operational_status"))
+2026-07-13 09:44:11,300 INFO ipython print("job_order:", do.get("job_order"), "pre_check_clearance:", do.get("pre_check_clearance"), "loading_delivery_note:", do.get("loading_delivery_note"))
+2026-07-13 09:44:11,300 INFO ipython for it in (do.get("items") or []):
+    print("item:", it.get("item_code"), it.get("batch_no"), it.get("qty"), it.get("uom"))
+pcc_name = do.get("pre_check_clearance")
+2026-07-13 09:44:11,301 INFO ipython if pcc_name:
+    pcc = frappe.get_doc("Pre-Check Clearance", pcc_name)
+    print("PCC:", pcc.name, pcc.get("qc_status"), pcc.get("overall_status"), pcc.get("batch_no"))
+frappe.db.rollback()
+2026-07-13 09:44:11,301 INFO ipython === session end ===
+2026-07-13 09:44:30,858 INFO ipython === bench console session ===
+2026-07-13 09:44:30,859 INFO ipython import frappe, json
+2026-07-13 09:44:30,859 INFO ipython do = frappe.get_doc("Delivery Order", "DO-2026-00033-1")
+2026-07-13 09:44:30,859 INFO ipython for it in (do.get("items") or []):
+    print(json.dumps(it.as_dict(), indent=2, default=str))
+pcc = frappe.get_doc("Pre-Check Clearance", "PCC-2026-00982")
+2026-07-13 09:44:30,860 INFO ipython print(json.dumps(pcc.as_dict(), indent=2, default=str))
+2026-07-13 09:44:30,860 INFO ipython frappe.db.rollback()
+2026-07-13 09:44:30,860 INFO ipython === session end ===
+2026-07-13 09:44:46,357 INFO ipython === bench console session ===
+2026-07-13 09:44:46,357 INFO ipython import frappe
+2026-07-13 09:44:46,357 INFO ipython do = frappe.get_doc("Delivery Order", "DO-2026-00033-1")
+2026-07-13 09:44:46,357 INFO ipython print("amended_from:", do.get("amended_from"))
+2026-07-13 09:44:46,357 INFO ipython orig = frappe.db.get_value("Delivery Order", "DO-2026-00033", ["docstatus","do_status","pre_check_clearance","loading_delivery_note"], as_dict=True)
+2026-07-13 09:44:46,358 INFO ipython print("original DO-2026-00033:", orig)
+2026-07-13 09:44:46,358 INFO ipython frappe.db.rollback()
+2026-07-13 09:44:46,358 INFO ipython === session end ===
+2026-07-13 09:49:04,494 INFO ipython === bench console session ===
+2026-07-13 09:49:04,495 INFO ipython import frappe
+2026-07-13 09:49:04,495 INFO ipython from apc_operations.services.delivery_order_service import get_security_new_dos, get_security_in_progress_dos, get_qc_new_dos, get_qc_pending_dos
+2026-07-13 09:49:04,496 INFO ipython do_name = "DO-2026-00033-1"
+2026-07-13 09:49:04,496 INFO ipython for label, fn in [("security_new", get_security_new_dos), ("security_in_progress", get_security_in_progress_dos), ("qc_new", get_qc_new_dos), ("qc_pending", get_qc_pending_dos)]:
+    names = [c.get("delivery_order") or c.get("name") for c in fn()]
+    print(label, do_name in names)
+2026-07-13 09:49:04,496 INFO ipython do = frappe.db.get_value("Delivery Order", do_name, ["operational_status","do_status","loading_delivery_note"], as_dict=True)
+2026-07-13 09:49:04,496 INFO ipython print(do)
+2026-07-13 09:49:04,497 INFO ipython === session end ===
+2026-07-13 10:48:18,990 INFO ipython === bench console session ===
+2026-07-13 10:48:18,991 INFO ipython 
+  frappe.db.sql("UPDATE `tabJob Order` SET commercial_movement = 'Outward' WHERE commercial_movement = 'Export'")
+  frappe.db.commit()
+2026-07-13 10:48:18,991 INFO ipython 
+  frappe.db.sql("UPDATE `tabDelivery Order` SET commercial_movement = 'Outward' WHERE commercial_movement = 'Export'")
+  frappe.db.sql("UPDATE `tabShipping Booking` SET commercial_movement = 'Outward' WHERE commercial_movement = 'Export'")
+  frappe.db.commit()
+2026-07-13 10:48:18,992 INFO ipython frappe.db.get_value("Job Order", {"job_order_number": "APCE102/test"}, ["name", "commercial_movement"])
+2026-07-13 10:48:18,992 INFO ipython   frappe.db.sql("UPDATE `tabDelivery Order` SET commercial_movement = 'Outward' WHERE commercial_movement = 'Export'")
+  frappe.db.commit()
+2026-07-13 10:48:18,992 INFO ipython bench --site apc.local migrate
+2026-07-13 10:48:18,992 INFO ipython === session end ===
+2026-07-13 10:48:53,526 INFO ipython === bench console session ===
+2026-07-13 10:48:53,526 INFO ipython   # Check for Property Setter overriding the options
+  frappe.db.get_value("Property Setter", {
+      "doc_type": "Delivery Order",
+      "field_name": "commercial_movement",
+      "property": "options"
+  }, "value")
+2026-07-13 10:48:53,526 INFO ipython === session end ===
+2026-07-13 13:25:03,286 INFO ipython === bench console session ===
+2026-07-13 13:25:03,287 INFO ipython import frappe
+2026-07-13 13:25:03,287 INFO ipython # Property Setters affecting capacity_load_mode
+2026-07-13 13:25:03,287 INFO ipython ps = frappe.get_all("Property Setter", filters={"doc_type": "Job Order Item", "field_name": "capacity_load_mode"}, fields=["name","property","value","doctype_or_field"])
+2026-07-13 13:25:03,287 INFO ipython print("PropertySetters(capacity_load_mode):", ps)
+2026-07-13 13:25:03,287 INFO ipython # Custom Field duplicate?
+2026-07-13 13:25:03,288 INFO ipython cf = frappe.get_all("Custom Field", filters={"dt": "Job Order Item", "fieldname": "capacity_load_mode"}, fields=["name","in_list_view","hidden","insert_after"])
+2026-07-13 13:25:03,288 INFO ipython print("CustomField(capacity_load_mode):", cf)
+2026-07-13 13:25:03,288 INFO ipython # Any Property Setter on Job Order Item at all
+2026-07-13 13:25:03,288 INFO ipython ps_all = frappe.get_all("Property Setter", filters={"doc_type": "Job Order Item"}, fields=["name","field_name","property","value"])
+2026-07-13 13:25:03,288 INFO ipython print("All PropertySetters(Job Order Item):", ps_all)
+2026-07-13 13:25:03,288 INFO ipython # Module of Job Order
+2026-07-13 13:25:03,288 INFO ipython mod = frappe.db.get_value("DocType", "Job Order", "module")
+2026-07-13 13:25:03,288 INFO ipython print("Job Order module:", mod)
+2026-07-13 13:25:03,288 INFO ipython # Workspaces referencing Job Order
+2026-07-13 13:25:03,288 INFO ipython ws_links = frappe.get_all("Workspace Link", filters={"link_to": "Job Order"}, fields=["parent","label","link_type"])
+2026-07-13 13:25:03,289 INFO ipython print("Workspace Links to Job Order:", ws_links)
+2026-07-13 13:25:03,289 INFO ipython ws_shortcuts = frappe.get_all("Workspace Shortcut", filters={"link_to": "Job Order"}, fields=["parent","label"])
+2026-07-13 13:25:03,289 INFO ipython print("Workspace Shortcuts to Job Order:", ws_shortcuts)
+2026-07-13 13:25:03,289 INFO ipython workspaces = frappe.get_all("Workspace", fields=["name","module","public","is_hidden"])
+2026-07-13 13:25:03,289 INFO ipython print("Workspaces:", workspaces)
+2026-07-13 13:25:03,289 INFO ipython === session end ===
+2026-07-13 14:41:36,097 INFO ipython === bench console session ===
+2026-07-13 14:41:36,098 INFO ipython import frappe, json
+2026-07-13 14:41:36,098 INFO ipython from apc_operations.transportation.api import get_inward_land_list, get_inward_land_detail
+2026-07-13 14:41:36,098 INFO ipython rows = get_inward_land_list()
+2026-07-13 14:41:36,098 INFO ipython match = [r for r in rows if "APCL104" in json.dumps(r, default=str)]
+2026-07-13 14:41:36,099 INFO ipython print("Matching cards:", json.dumps(match, indent=2, default=str))
+2026-07-13 14:41:36,099 INFO ipython if not match:
+    # try direct Transport Schedule / Job Order lookup
+    ts = frappe.get_all("Transport Schedule", filters={"job_order_number": "APCL104"}, fields=["name","job_order","job_order_number","transport_type"])
+    print("TS by job_order_number:", ts)
+    jo = frappe.get_all("Job Order", filters={"job_order_number": "APCL104"}, fields=["name","job_order_number"])
+    print("JO by job_order_number:", jo)
+exit()
+2026-07-13 14:41:36,099 INFO ipython === session end ===
+2026-07-13 14:41:49,432 INFO ipython === bench console session ===
+2026-07-13 14:41:49,433 INFO ipython import frappe, json, traceback
+2026-07-13 14:41:49,433 INFO ipython from apc_operations.transportation.api import get_inward_land_detail
+2026-07-13 14:41:49,433 INFO ipython try:
+    data = get_inward_land_detail(job_order="JO-2026-01032")
+    print(json.dumps(data, indent=2, default=str))
+except Exception as e:
+    traceback.print_exc()
+exit()
+2026-07-13 14:41:49,434 INFO ipython === session end ===
+2026-07-13 14:53:07,504 INFO ipython === bench console session ===
+2026-07-13 14:53:07,504 INFO ipython import frappe, json
+2026-07-13 14:53:07,504 INFO ipython from apc_operations.transportation.api import get_inward_land_detail
+2026-07-13 14:53:07,505 INFO ipython data = get_inward_land_detail(job_order="JO-2026-01032")
+2026-07-13 14:53:07,505 INFO ipython print(json.dumps(data, indent=2, default=str))
+2026-07-13 14:53:07,505 INFO ipython === session end ===
