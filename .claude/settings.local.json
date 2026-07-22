@@ -46,7 +46,24 @@
       "Read(///wsl.localhost/Ubuntu/home/**)",
       "Bash(bench --site:*)",
       "Bash(wsl.exe -e bash -lc \"cd /home/it/Project/APC_Operations/frappe-bench && bench --site apc.local clear-cache\")",
-      "Bash(wsl.exe -e bash -lc \"cd /home/it/Project/APC_Operations/frappe-bench && source env/bin/activate && bench --site apc.local clear-cache\")"
+      "Bash(wsl.exe -e bash -lc \"cd /home/it/Project/APC_Operations/frappe-bench && source env/bin/activate && bench --site apc.local clear-cache\")",
+      "Bash(grep -n \"def.*loading_delivery_note\\\\|def create.*ldn\" apps/apc_operations/apc_operations/shipping/services/*.py -i)",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\IT\\\\.claude\\\\projects\\\\ /b\" 2>/dev/null)",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\IT\\\\.claude\\\\projects\\\\--wsl-localhost-Ubuntu-home-it-Project-APC-Operations-frappe-bench\\\\memory\\\\ /b 2>&1\")",
+      "Bash(find /home/it/Project/APC_Operations/frappe-bench -type f -name *container*)",
+      "Bash(grep -E \"\\\\.\\(json|py\\)$\")",
+      "Read(///wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/**)",
+      "Read(///wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/**)",
+      "Read(///wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/patches/**)",
+      "Bash(source //wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/env/bin/activate)",
+      "Bash(bench --site apc.local execute \"frappe.db.sql\" --args \"\"\"SELECT name FROM \\\\`tabPatch Log\\\\` WHERE patch LIKE ''%apc_container_type_master%''\"\"\")",
+      "Bash(/home/it/Project/APC_Operations/frappe-bench/env/bin/python -c \"import frappe; frappe.init\\('apc.local'\\); frappe.connect\\(\\); result = frappe.db.sql\\(\\\\\"SELECT patch FROM \\\\`tabPatch Log\\\\` WHERE patch LIKE '%apc_container_type_master%'\\\\\"\\); print\\(result\\); frappe.destroy\\(\\)\" 2>&1)",
+      "Read(//mnt/wsl/instances/Ubuntu/home/it/Project/APC_Operations/frappe-bench/**)",
+      "Read(///wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/**)",
+      "Read(///wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/shipping/**)",
+      "Bash(mkdir -p //wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/shipping/print_format/standard_import_po)",
+      "Bash(touch //wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/shipping/print_format/standard_import_po/__init__.py)",
+      "Read(///wsl.localhost/Ubuntu/home/it/Project/APC_Operations/frappe-bench/apps/apc_operations/apc_operations/shipping/doctype/**)"
     ]
   }
 }

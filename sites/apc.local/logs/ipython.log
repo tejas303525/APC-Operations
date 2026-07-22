@@ -505,3 +505,352 @@ exit()
 2026-07-13 14:53:07,505 INFO ipython data = get_inward_land_detail(job_order="JO-2026-01032")
 2026-07-13 14:53:07,505 INFO ipython print(json.dumps(data, indent=2, default=str))
 2026-07-13 14:53:07,505 INFO ipython === session end ===
+2026-07-16 10:31:49,272 INFO ipython === bench console session ===
+2026-07-16 10:31:49,273 INFO ipython from apc_operations.patches.v0_10.apc_container_type_master import _create_master_records
+  _create_master_records()
+  frappe.db.commit()
+  print("Done")
+2026-07-16 10:31:49,273 INFO ipython from apc_operations.patches.v0_10.apc_container_type_master import _create_master_records
+    _create_master_records()
+    frappe.db.commit()
+    print("Done")
+2026-07-16 10:31:49,274 INFO ipython from apc_operations.patches.v0_10.apc_container_type_master import _create_master_records
+_create_master_records()
+ frappe.db.commit()
+ print("Done")
+2026-07-16 10:31:49,274 INFO ipython from apc_operations.patches.v0_10.apc_container_type_master import _create_master_records
+_create_master_records()
+ frappe.db.commit()
+print("Done")
+2026-07-16 10:31:49,274 INFO ipython from apc_operations.patches.v0_10.apc_container_type_master import _create_master_records
+_create_master_records()
+frappe.db.commit()
+print("Done")
+2026-07-16 10:31:49,274 INFO ipython bench --site apc.local clear-cache
+2026-07-16 10:31:49,274 INFO ipython === session end ===
+2026-07-16 14:32:39,826 INFO ipython === bench console session ===
+2026-07-16 14:32:39,828 INFO ipython 
+  frappe.reload_doctype("Job Order")
+  frappe.db.commit()
+2026-07-16 14:32:39,829 INFO ipython === session end ===
+2026-07-18 10:45:44,026 INFO ipython === bench console session ===
+2026-07-18 10:45:44,035 INFO ipython   import frappe
+
+  job_orders = ["JO-2026-00065", "JO-2026-00025", "JO-2026-00012"]
+
+  # Doctype name → field that links to Job Order, ordered deepest first
+  linked_doctypes = [
+      ("Weighment Slip",                "job_order"),
+      ("Loading Delivery Note",         "job_order"),
+      ("QC Report Request",             "job_order"),
+      ("Security Inspection",           "job_order"),
+      ("Security Draft Delivery Note",  "job_order"),
+      ("Security Dispatch",             "job_order"),
+      ("Gate Pass",                     "transport_schedule"),   # links via TRN, handled separately
+      ("Transport PO Request",          "job_order"),
+      ("Transport Schedule",            "job_order"),            # in transportation module
+      ("Shipping Booking",              "job_order"),
+  ]
+
+  for jo in job_orders:
+      print(f"\n--- Processing {jo} ---")
+
+      # Gate Pass links via Transport Schedule, not directly to Job Order
+      # Get transport schedules first, then find gate passes
+      trn_list = frappe.get_all("Transport Schedule", filters={"job_order": jo}, pluck="name")
+      for trn in trn_list:
+          gp_list = frappe.get_all("Gate Pass", filters={"transport_schedule": trn}, pluck="name")
+          for gp in gp_list:
+              frappe.delete_doc("Gate Pass", gp, force=True, ignore_permissions=True)
+              print(f"  Deleted Gate Pass: {gp}")
+
+      for doctype, fieldname in linked_doctypes:
+          if doctype == "Gate Pass":
+              continue  # already handled above
+          try:
+              records = frappe.get_all(doctype, filters={fieldname: jo}, pluck="name")
+              for name in records:
+                  frappe.delete_doc(doctype, name, force=True, ignore_permissions=True)
+                  print(f"  Deleted {doctype}: {name}")
+          except Exception as e:
+              print(f"  Skipped {doctype}: {e}")
+
+      try:
+          frappe.delete_doc("Job Order", jo, force=True, ignore_permissions=True)
+          print(f"  Deleted Job Order: {jo}")
+      except Exception as e:
+          print(f"  Could not delete Job Order {jo}: {e}")
+
+  frappe.db.commit()
+  print("\nDone.")
+2026-07-18 10:45:44,035 INFO ipython === session end ===
+2026-07-18 11:11:29,687 INFO ipython === bench console session ===
+2026-07-18 11:11:29,687 INFO ipython  import frappe
+  frappe.db.set_single_value("Stock Settings", "item_naming_by", "Item Code")
+  frappe.db.commit()
+2026-07-18 11:11:29,688 INFO ipython  import frappe
+ frappe.db.set_single_value("Stock Settings", "item_naming_by", "Item Code")
+ frappe.db.commit()
+2026-07-18 11:11:29,688 INFO ipython === session end ===
+2026-07-18 11:17:36,596 INFO ipython === bench console session ===
+2026-07-18 11:17:36,596 INFO ipython 
+  import frappe
+  print(frappe.db.get_single_value("Stock Settings", "item_naming_by"))
+2026-07-18 11:17:36,596 INFO ipython   import frappe
+
+  # Find all property setters on Item Code field
+  setters = frappe.get_all(
+      "Property Setter",
+      filters={"doc_type": "Item", "field_name": "item_code"},
+      fields=["name", "property", "value"]
+  )
+
+  print("Found property setters:")
+  for s in setters:
+      print(f"  {s['name']} | {s['property']} = {s['value']}")
+
+  # Delete them all
+  for s in setters:
+      frappe.delete_doc("Property Setter", s["name"], ignore_permissions=True)
+      print(f"Deleted: {s['name']}")
+
+  frappe.db.commit()
+  print("Done.")
+2026-07-18 11:17:36,596 INFO ipython === session end ===
+2026-07-18 11:26:14,968 INFO ipython === bench console session ===
+2026-07-18 11:26:14,968 INFO ipython import frappe
+2026-07-18 11:26:14,968 INFO ipython  frappe.delete_doc("Item", "STO-ITEM-2026-00001", force=True, ignore_permissions=True)
+2026-07-18 11:26:14,968 INFO ipython frappe.db.commit()
+  print("Deleted.")
+2026-07-18 11:26:14,968 INFO ipython frappe.db.commit()
+print("Deleted.")
+2026-07-18 11:26:14,969 INFO ipython 
+  import frappe
+
+  # Check for custom field overriding item_code
+  cf = frappe.db.get_value(
+      "Custom Field",
+      {"dt": "Item", "fieldname": "item_code"},
+      ["name", "fieldtype", "options"],
+      as_dict=True
+  )
+  print("Custom Field:", cf)
+
+  # Also check remaining property setters
+  setters = frappe.get_all(
+      "Property Setter",
+      filters={"doc_type": "Item", "field_name": "item_code"},
+      fields=["name", "property", "value"]
+  )
+  print("Property Setters:", setters)
+2026-07-18 11:26:14,969 INFO ipython q
+2026-07-18 11:26:14,969 INFO ipython q
+2026-07-18 11:26:14,969 INFO ipython === session end ===
+2026-07-18 11:41:30,119 INFO ipython === bench console session ===
+2026-07-18 11:41:30,119 INFO ipython 
+  import frappe
+
+  # Check property setters
+  setters = frappe.get_all(
+      "Property Setter",
+      filters={"doc_type": "Job Order", "field_name": "container_type"},
+      fields=["name", "property", "value"]
+  )
+  print("Property Setters:", setters)
+
+  # Check custom field
+  cf = frappe.db.get_value(
+      "Custom Field",
+      {"dt": "Job Order", "fieldname": "container_type"},
+      ["name", "fieldtype", "options"],
+      as_dict=True
+  )
+  print("Custom Field:", cf)
+2026-07-18 11:41:30,119 INFO ipython === session end ===
+2026-07-18 11:44:51,857 INFO ipython === bench console session ===
+2026-07-18 11:44:51,858 INFO ipython  import frappe
+
+  field = frappe.db.get_value(
+      "DocField",
+      {"parent": "Job Order", "fieldname": "container_type"},
+      ["name", "fieldtype", "options"],
+      as_dict=True
+  )
+  print("DB DocField:", field)
+2026-07-18 11:44:51,858 INFO ipython  import frappe
+
+ field = frappe.db.get_value(
+    "DocField",
+      {"parent": "Job Order", "fieldname": "container_type"},
+      ["name", "fieldtype", "options"],
+      as_dict=True
+  )
+  print("DB DocField:", field)
+2026-07-18 11:44:51,858 INFO ipython  import frappe
+
+ field = frappe.db.get_value(
+    "DocField",
+      {"parent": "Job Order", "fieldname": "container_type"},
+      ["name", "fieldtype", "options"],
+      as_dict=True
+  )
+ print("DB DocField:", field)
+2026-07-18 11:44:51,858 INFO ipython   import frappe
+
+  frappe.db.set_value(
+      "DocField",
+      "jf0r650o7v",
+      {
+          "fieldtype": "Link",
+          "options": "APC Container Type"
+      }
+  )
+  frappe.db.commit()
+  print("Fixed.")
+2026-07-18 11:44:51,858 INFO ipython === session end ===
+2026-07-18 13:23:26,986 INFO ipython === bench console session ===
+2026-07-18 13:23:26,988 INFO ipython import frappe
+
+  jo = "JO-2026-00264"
+
+  # Delete Gate Passes via Transport Schedule
+  trn_list = frappe.get_all("Transport Schedule", filters={"job_order": jo}, pluck="name")
+  for trn in trn_list:
+      gp_list = frappe.get_all("Gate Pass", filters={"transport_schedule": trn}, pluck="name")
+      for gp in gp_list:
+          frappe.delete_doc("Gate Pass", gp, force=True, ignore_permissions=True)
+          print(f"Deleted Gate Pass: {gp}")
+
+  # Delete all linked docs
+  linked_doctypes = [
+      ("Weighment Slip",               "job_order"),
+      ("Loading Delivery Note",        "job_order"),
+      ("QC Report Request",            "job_order"),
+      ("Security Inspection",          "job_order"),
+      ("Security Draft Delivery Note", "job_order"),
+      ("Security Dispatch",            "job_order"),
+      ("Transport PO Request",         "job_order"),
+      ("Transport Schedule",           "job_order"),
+      ("Shipping Booking",             "job_order"),
+  ]
+
+  for doctype, fieldname in linked_doctypes:
+      records = frappe.get_all(doctype, filters={fieldname: jo}, pluck="name")
+      for name in records:
+          frappe.delete_doc(doctype, name, force=True, ignore_permissions=True)
+          print(f"Deleted {doctype}: {name}")
+
+  frappe.delete_doc("Job Order", jo, force=True, ignore_permissions=True)
+  print(f"Deleted Job Order: {jo}")
+
+  frappe.db.commit()
+  print("Done.")
+2026-07-18 13:23:26,989 INFO ipython import frappe
+
+jo = "JO-2026-00264"
+
+  # Delete Gate Passes via Transport Schedule
+trn_list = frappe.get_all("Transport Schedule", filters={"job_order": jo}, pluck="name")
+ for trn in trn_list:
+   gp_list = frappe.get_all("Gate Pass", filters={"transport_schedule": trn}, pluck="name")
+    for gp in gp_list:
+      frappe.delete_doc("Gate Pass", gp, force=True, ignore_permissions=True)
+        print(f"Deleted Gate Pass: {gp}")
+
+  # Delete all linked docs
+linked_doctypes = [
+      ("Weighment Slip",               "job_order"),
+      ("Loading Delivery Note",        "job_order"),
+      ("QC Report Request",            "job_order"),
+      ("Security Inspection",          "job_order"),
+      ("Security Draft Delivery Note", "job_order"),
+      ("Security Dispatch",            "job_order"),
+      ("Transport PO Request",         "job_order"),
+      ("Transport Schedule",           "job_order"),
+      ("Shipping Booking",             "job_order"),
+  ]
+
+for doctype, fieldname in linked_doctypes:
+    records = frappe.get_all(doctype, filters={fieldname: jo}, pluck="name")
+    for name in records:
+        frappe.delete_doc(doctype, name, force=True, ignore_permissions=True)
+        print(f"Deleted {doctype}: {name}")
+
+frappe.delete_doc("Job Order", jo, force=True, ignore_permissions=True)
+print(f"Deleted Job Order: {jo}")
+
+frappe.db.commit()
+print("Done.")
+2026-07-18 13:23:26,989 INFO ipython import frappe
+
+jo = "JO-2026-00264"
+
+  # Delete Gate Passes via Transport Schedule
+trn_list = frappe.get_all("Transport Schedule", filters={"job_order": jo}, pluck="name")
+for trn in trn_list:
+   gp_list = frappe.get_all("Gate Pass", filters={"transport_schedule": trn}, pluck="name")
+    for gp in gp_list:
+      frappe.delete_doc("Gate Pass", gp, force=True, ignore_permissions=True)
+        print(f"Deleted Gate Pass: {gp}")
+
+  # Delete all linked docs
+linked_doctypes = [
+      ("Weighment Slip",               "job_order"),
+      ("Loading Delivery Note",        "job_order"),
+      ("QC Report Request",            "job_order"),
+      ("Security Inspection",          "job_order"),
+      ("Security Draft Delivery Note", "job_order"),
+      ("Security Dispatch",            "job_order"),
+      ("Transport PO Request",         "job_order"),
+      ("Transport Schedule",           "job_order"),
+      ("Shipping Booking",             "job_order"),
+  ]
+
+for doctype, fieldname in linked_doctypes:
+    records = frappe.get_all(doctype, filters={fieldname: jo}, pluck="name")
+    for name in records:
+        frappe.delete_doc(doctype, name, force=True, ignore_permissions=True)
+        print(f"Deleted {doctype}: {name}")
+
+frappe.delete_doc("Job Order", jo, force=True, ignore_permissions=True)
+print(f"Deleted Job Order: {jo}")
+
+frappe.db.commit()
+print("Done.")
+2026-07-18 13:23:26,989 INFO ipython import frappe
+
+jo = "JO-2026-00264"
+
+  # Delete Gate Passes via Transport Schedule
+trn_list = frappe.get_all("Transport Schedule", filters={"job_order": jo}, pluck="name")
+for trn in trn_list:
+  gp_list = frappe.get_all("Gate Pass", filters={"transport_schedule": trn}, pluck="name")
+  for gp in gp_list:
+    frappe.delete_doc("Gate Pass", gp, force=True, ignore_permissions=True)
+    print(f"Deleted Gate Pass: {gp}")
+
+  # Delete all linked docs
+linked_doctypes = [
+      ("Weighment Slip",               "job_order"),
+      ("Loading Delivery Note",        "job_order"),
+      ("QC Report Request",            "job_order"),
+      ("Security Inspection",          "job_order"),
+      ("Security Draft Delivery Note", "job_order"),
+      ("Security Dispatch",            "job_order"),
+      ("Transport PO Request",         "job_order"),
+      ("Transport Schedule",           "job_order"),
+      ("Shipping Booking",             "job_order"),
+  ]
+
+for doctype, fieldname in linked_doctypes:
+    records = frappe.get_all(doctype, filters={fieldname: jo}, pluck="name")
+    for name in records:
+        frappe.delete_doc(doctype, name, force=True, ignore_permissions=True)
+        print(f"Deleted {doctype}: {name}")
+
+frappe.delete_doc("Job Order", jo, force=True, ignore_permissions=True)
+print(f"Deleted Job Order: {jo}")
+
+frappe.db.commit()
+print("Done.")
+2026-07-18 13:23:26,990 INFO ipython === session end ===

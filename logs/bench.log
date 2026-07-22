@@ -3200,3 +3200,245 @@ SELECT name, creation, LEFT(error, 1200) FROM `tabError Log` WHERE creation >= '
 2026-07-13 14:41:48,313 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
 2026-07-13 14:53:05,002 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
 2026-07-13 14:53:06,385 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-14 08:49:07,709 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 08:49:08,016 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 08:49:08,021 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 08:49:08,033 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 08:49:08,036 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 10:15:07,032 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 10:15:07,364 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 10:15:07,365 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 10:15:07,373 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 10:15:07,376 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 10:44:34,856 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 10:44:35,090 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 10:44:35,096 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 10:44:35,114 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 10:44:35,118 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 12:00:01,912 INFO /home/it/Project/APC_Operations/venv/bin/bench --verbose --site all backup
+2026-07-14 12:28:30,311 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 12:28:30,593 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 12:28:30,596 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 12:28:30,602 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 12:28:30,609 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 12:54:55,653 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 12:54:56,227 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 12:54:56,229 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 12:54:56,235 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 12:54:56,243 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 13:01:50,817 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 13:01:51,054 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 13:01:51,054 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 13:01:51,061 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 13:01:51,071 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 13:08:44,765 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 13:08:45,001 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 13:08:45,003 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 13:08:45,013 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 13:08:45,018 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 13:15:39,261 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 13:15:39,513 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 13:15:39,516 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 13:15:39,521 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 13:15:39,526 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 13:29:09,333 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 13:29:09,613 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 13:29:09,613 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 13:29:09,618 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 13:29:09,636 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 14:33:05,380 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 14:33:05,654 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 14:33:05,661 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 14:33:05,662 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 14:33:05,666 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 14:39:56,771 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 14:39:57,046 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 14:39:57,053 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 14:39:57,058 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 14:39:57,070 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 14:46:59,466 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 14:46:59,690 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 14:46:59,715 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 14:46:59,725 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 14:46:59,736 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 14:56:44,274 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 14:56:44,499 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 14:56:44,507 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 14:56:44,515 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 14:56:44,534 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 15:04:17,447 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 15:04:17,725 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 15:04:17,749 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 15:04:17,751 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 15:04:17,754 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 15:12:20,047 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 15:12:20,274 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 15:12:20,279 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 15:12:20,282 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 15:12:20,286 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 15:19:13,261 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 15:19:13,548 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 15:19:13,551 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 15:19:13,554 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 15:19:13,562 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 15:27:47,850 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 15:27:48,137 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 15:27:48,138 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 15:27:48,139 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 15:27:48,141 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 15:35:54,993 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 15:35:55,220 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 15:35:55,225 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 15:35:55,242 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 15:35:55,245 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 15:45:41,653 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 15:45:41,874 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 15:45:41,876 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 15:45:41,894 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 15:45:41,894 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 16:13:17,609 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 16:13:17,872 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 16:13:17,881 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 16:13:17,887 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 16:13:17,901 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 16:13:53,047 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 16:13:53,267 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 16:13:53,273 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 16:13:53,277 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 16:13:53,295 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 16:20:53,153 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 16:20:53,386 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 16:20:53,393 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 16:20:53,399 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 16:20:53,410 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 16:27:58,065 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 16:27:58,449 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 16:27:58,456 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 16:27:58,457 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 16:27:58,460 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 16:40:28,918 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 16:40:29,155 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 16:40:29,157 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 16:40:29,159 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 16:40:29,162 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 16:47:21,953 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 16:47:22,181 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 16:47:22,185 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 16:47:22,188 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 16:47:22,204 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 16:54:14,103 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 16:54:14,343 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 16:54:14,352 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 16:54:14,361 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 16:54:14,365 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 17:01:44,514 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 17:01:44,776 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 17:01:44,788 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 17:01:44,792 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 17:01:44,794 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 17:19:17,157 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 17:19:17,383 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 17:19:17,385 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 17:19:17,391 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 17:19:17,391 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 17:28:23,184 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local execute frappe.get_doc --args ["Loading Delivery Note", "LDN-2026-01114"]
+2026-07-14 17:28:37,444 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local execute frappe.get_doc --args ["Job Order", "JO-2026-01107"]
+2026-07-14 17:30:02,981 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-14 17:30:03,215 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-14 17:30:03,220 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-14 17:30:03,230 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-14 17:30:03,241 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-14 17:35:38,504 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local execute frappe.db.get_value --args ["Transport Schedule", "TRN-2026-01109", ["qty_to_load", "quantity", "transport_status", "outward_type"]] --kwargs {"as_dict": true}
+2026-07-14 17:35:46,665 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local execute frappe.get_doc --args ["Transport Schedule", "TRN-2026-01109"]
+2026-07-14 19:35:33,835 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local execute frappe.db.get_value --args ["Delivery Order", "DO-2026-00043", ["planned_quantity", "total_qty", "expected_packaging_qty", "transport_schedule", "job_order"]] --kwargs {"as_dict": true}
+2026-07-14 19:35:42,835 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local execute frappe.get_doc --args ["Delivery Order", "DO-2026-00043"]
+2026-07-15 11:34:30,390 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-15 11:35:42,333 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate --skip-failing
+2026-07-15 11:35:46,287 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-15 11:35:46,554 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-15 11:35:46,559 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-15 11:35:46,567 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-15 11:35:46,571 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-15 12:00:02,031 INFO /home/it/Project/APC_Operations/venv/bin/bench --verbose --site all backup
+2026-07-15 12:23:59,874 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-15 12:24:11,722 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-15 14:27:17,632 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-15 14:27:27,495 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local build
+2026-07-15 14:27:44,542 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-16 09:02:50,045 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-16 09:02:50,626 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-16 09:02:50,629 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-16 09:02:50,644 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-16 09:02:50,655 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-16 09:13:14,778 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-16 09:13:15,661 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-16 09:13:15,667 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-16 09:13:16,055 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-16 09:13:16,183 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-16 09:38:12,567 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-16 09:44:44,948 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local execute frappe.db.sql --args ["SELECT patch FROM \ WHERE patch LIKE \"%apc_container_type_master%\""]
+2026-07-16 09:44:59,698 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local mariadb --execute SELECT patch FROM \ WHERE patch LIKE '%apc_container_type_master%'
+2026-07-16 09:47:35,578 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local build --app apc_operations
+2026-07-16 09:50:13,625 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-16 09:50:54,712 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-16 09:50:55,731 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-website-cache
+2026-07-16 10:17:12,036 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-16 10:31:50,690 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-16 11:59:34,130 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-16 12:00:02,003 INFO /home/it/Project/APC_Operations/venv/bin/bench --verbose --site all backup
+2026-07-16 14:32:44,392 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local build --app apc_operations
+2026-07-17 16:17:32,174 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-17 16:17:32,513 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-17 16:17:32,514 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-17 16:17:32,524 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-17 16:17:32,528 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-18 09:12:13,904 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-18 09:12:14,371 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-18 09:12:14,377 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-18 09:12:14,407 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-18 09:12:14,409 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-18 09:55:46,139 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-18 10:45:57,818 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-18 11:10:55,588 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-18 11:11:31,015 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 11:14:54,392 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 11:15:06,997 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-18 11:17:38,122 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 11:19:46,596 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-18 11:26:16,818 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-18 11:26:26,491 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 11:39:56,274 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-18 11:41:32,209 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-18 11:41:42,174 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 11:42:13,074 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-18 11:42:13,307 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-18 11:42:13,316 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-18 11:42:13,333 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-18 11:42:13,335 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-18 11:43:29,784 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-18 11:44:54,108 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 11:51:11,918 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 11:51:14,009 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-18 12:00:02,183 INFO /home/it/Project/APC_Operations/venv/bin/bench --verbose --site all backup
+2026-07-18 13:23:29,635 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local migrate
+2026-07-18 13:23:39,386 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 14:15:06,865 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local build --app apc_operations
+2026-07-18 14:15:09,605 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local clear-cache
+2026-07-18 14:16:57,823 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-18 15:01:34,843 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local console
+2026-07-20 08:53:38,117 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-20 08:53:38,496 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-20 08:53:38,502 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-20 08:53:38,509 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-20 08:53:38,512 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-20 09:11:47,277 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local backup --with-files
+2026-07-20 12:00:01,447 INFO /home/it/Project/APC_Operations/venv/bin/bench --verbose --site all backup
+2026-07-21 12:00:02,225 INFO /home/it/Project/APC_Operations/venv/bin/bench --verbose --site all backup
+2026-07-21 18:00:01,649 INFO /home/it/Project/APC_Operations/venv/bin/bench --verbose --site all backup
+2026-07-22 10:12:44,764 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench start
+2026-07-22 10:12:45,101 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench serve --port 8000
+2026-07-22 10:12:45,105 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench worker
+2026-07-22 10:12:45,106 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench schedule
+2026-07-22 10:12:45,109 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench watch
+2026-07-22 10:58:41,284 INFO /home/it/Project/APC_Operations/frappe-bench/env/bin/bench --site apc.local backup --with-files
+2026-07-22 12:00:01,906 INFO /home/it/Project/APC_Operations/venv/bin/bench --verbose --site all backup

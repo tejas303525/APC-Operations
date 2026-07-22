@@ -70,3 +70,190 @@ ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
 ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
 2026-07-13 10:49:20,835 WARNING database DDL Query made to DB:
 ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-15 12:24:00,697 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-07-15 12:24:01,700 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2026-07-15 12:24:02,031 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140) default 'Active'
+2026-07-15 12:24:02,189 WARNING database DDL Query made to DB:
+create table `tabAPC Container Type` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`container_type_name` varchar(140) unique,
+`container_size` varchar(140),
+`active` int(1) not null default 1,
+`max_gross_kg` decimal(21,9) not null default 0,
+`description` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-07-15 12:24:02,490 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `capacity` decimal(21,9) not null default 0
+2026-07-15 12:24:02,637 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAPC Container Load Capacity` ADD COLUMN `container_type` varchar(140)
+2026-07-15 12:24:02,651 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAPC Container Load Capacity` MODIFY `max_product_net_mt` decimal(21,9) not null default 0
+2026-07-15 12:24:02,895 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-15 12:24:03,046 WARNING database DDL Query made to DB:
+ALTER TABLE `tabContainer Detail` MODIFY `net_weight` decimal(21,9) not null default 0, MODIFY `gross_weight` decimal(21,9) not null default 0, MODIFY `cbm` decimal(21,9) not null default 0
+2026-07-15 12:24:03,656 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTransport Schedule` MODIFY `qty_to_load` decimal(21,9) not null default 0, MODIFY `transport_charges` decimal(21,9) not null default 0, MODIFY `additional_charges` decimal(21,9) not null default 0, MODIFY `cargo_weight` decimal(21,9) not null default 0, MODIFY `total_cost` decimal(21,9) not null default 0, MODIFY `fuel_cost` decimal(21,9) not null default 0
+2026-07-15 12:24:04,932 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-15 12:24:05,879 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
+2026-07-15 12:24:06,088 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2026-07-15 12:24:06,278 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-15 14:27:18,372 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-07-15 14:27:19,436 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2026-07-15 14:27:19,773 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140) default 'Active'
+2026-07-15 14:27:19,990 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `capacity` decimal(21,9) not null default 0
+2026-07-15 14:27:20,268 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-15 14:27:21,669 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-15 14:27:22,607 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
+2026-07-15 14:27:22,800 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2026-07-15 14:27:22,994 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-16 09:38:13,418 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-07-16 09:38:14,475 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2026-07-16 09:38:14,861 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140) default 'Active'
+2026-07-16 09:38:15,071 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLoading DN Batch` ADD COLUMN `planned_container_no` int(11) not null default 0
+2026-07-16 09:38:15,086 WARNING database DDL Query made to DB:
+ALTER TABLE `tabLoading DN Batch` MODIFY `allocated_qty` decimal(21,9) not null default 0
+2026-07-16 09:38:15,272 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `capacity` decimal(21,9) not null default 0
+2026-07-16 09:38:15,538 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-16 09:38:16,934 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-16 09:38:17,917 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
+2026-07-16 09:38:18,103 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2026-07-16 09:38:18,290 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-16 09:50:14,357 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-07-16 09:50:15,275 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2026-07-16 09:50:15,578 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140) default 'Active'
+2026-07-16 09:50:15,789 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `capacity` decimal(21,9) not null default 0
+2026-07-16 09:50:16,052 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-16 09:50:17,416 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-16 09:50:18,291 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
+2026-07-16 09:50:18,482 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2026-07-16 09:50:18,662 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-16 12:00:41,402 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-18 10:43:30,691 WARNING database DDL Query made to DB:
+ALTER TABLE `tabItem` MODIFY `safety_stock` decimal(21,9) not null default 0, MODIFY `opening_stock` decimal(21,9) not null default 0, MODIFY `last_purchase_rate` decimal(21,9) not null default 0, MODIFY `over_billing_allowance` decimal(21,9) not null default 0, MODIFY `standard_rate` decimal(21,9) not null default 0, MODIFY `total_projected_qty` decimal(21,9) not null default 0, MODIFY `over_delivery_receipt_allowance` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `max_discount` decimal(21,9) not null default 0
+2026-07-18 10:45:58,511 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-07-18 10:45:59,573 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2026-07-18 10:45:59,885 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140) default 'Active'
+2026-07-18 10:46:00,101 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `capacity` decimal(21,9) not null default 0
+2026-07-18 10:46:01,475 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-18 10:46:02,525 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
+2026-07-18 10:46:02,713 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2026-07-18 10:46:02,893 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-18 10:46:03,573 WARNING database DDL Query made to DB:
+ALTER TABLE `tabItem` MODIFY `over_billing_allowance` decimal(21,9) not null default 0, MODIFY `safety_stock` decimal(21,9) not null default 0, MODIFY `max_discount` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `over_delivery_receipt_allowance` decimal(21,9) not null default 0, MODIFY `opening_stock` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `total_projected_qty` decimal(21,9) not null default 0, MODIFY `last_purchase_rate` decimal(21,9) not null default 0, MODIFY `standard_rate` decimal(21,9) not null default 0
+2026-07-18 11:26:17,516 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-07-18 11:26:18,485 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2026-07-18 11:26:18,774 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140) default 'Active'
+2026-07-18 11:26:18,985 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `capacity` decimal(21,9) not null default 0
+2026-07-18 11:26:19,233 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-18 11:26:20,565 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-18 11:26:21,420 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
+2026-07-18 11:26:21,596 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2026-07-18 11:26:21,771 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-18 11:26:22,383 WARNING database DDL Query made to DB:
+ALTER TABLE `tabItem` MODIFY `over_billing_allowance` decimal(21,9) not null default 0, MODIFY `max_discount` decimal(21,9) not null default 0, MODIFY `opening_stock` decimal(21,9) not null default 0, MODIFY `total_projected_qty` decimal(21,9) not null default 0, MODIFY `valuation_rate` decimal(21,9) not null default 0, MODIFY `last_purchase_rate` decimal(21,9) not null default 0, MODIFY `standard_rate` decimal(21,9) not null default 0, MODIFY `over_delivery_receipt_allowance` decimal(21,9) not null default 0, MODIFY `weight_per_unit` decimal(21,9) not null default 0, MODIFY `safety_stock` decimal(21,9) not null default 0
+2026-07-18 11:41:32,905 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-07-18 11:41:33,906 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2026-07-18 11:41:34,245 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140) default 'Active'
+2026-07-18 11:41:34,455 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `capacity` decimal(21,9) not null default 0
+2026-07-18 11:41:34,735 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-18 11:41:36,157 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-18 11:41:37,091 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
+2026-07-18 11:41:37,280 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2026-07-18 11:41:37,457 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-18 13:23:30,521 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2026-07-18 13:23:31,499 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2026-07-18 13:23:31,827 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140) default 'Active'
+2026-07-18 13:23:32,028 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `capacity` decimal(21,9) not null default 0
+2026-07-18 13:23:32,287 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-18 13:23:33,690 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
+2026-07-18 13:23:34,583 WARNING database DDL Query made to DB:
+ALTER TABLE `tabDriver` MODIFY `status` varchar(140)
+2026-07-18 13:23:34,777 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2026-07-18 13:23:34,954 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle` MODIFY `vehicle_value` decimal(21,9) not null default 0
+2026-07-18 14:18:36,526 WARNING database DDL Query made to DB:
+ALTER TABLE `tabJob Order` MODIFY `insurance_value` decimal(21,9) not null default 0
